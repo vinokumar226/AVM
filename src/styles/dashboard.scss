@@ -1,0 +1,55 @@
+// .cardTile {
+//   border-radius: 0.5rem;
+//   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+//   transition: box-shadow 0.3s ease;
+//   background-color: white;
+// }
+
+// .cardTile:hover {
+//   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+// }
+
+
+.dashboard-title {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.summary-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .card-tile {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+
+.tile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+
+  table {
+    min-width: 800px; // Or based on your columns
+  }
+}
+
