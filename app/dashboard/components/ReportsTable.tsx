@@ -8,7 +8,9 @@ import {
   TableHeader,
   TableBody,
   TableCell,
-  Column
+  Column,
+  Link,
+  Button
 } from '@carbon/react';
 import { Download, DocumentPdf } from '@carbon/icons-react';
 
@@ -22,23 +24,33 @@ const headers = [
   { key: 'action', header: 'Action' },
 ];
 
-const rows = [
-  {
-    id: '1',
-    image: '/house1.jpg',
-    address: '838 HOUSTON RD',
-    loan: '12345',
-    ref: '12345',
-    status: 'Active',
-    date: 'May 18, 2025',
-    action: <Download size={20} />
-  }
-];
+// const rows = [
+//   {
+//     id: '1',
+//     image: '/house1.jpg',
+//     address: '838 HOUSTON RD',
+//     loan: '12345',
+//     ref: '12345',
+//     status: 'Active',
+//     date: 'May 18, 2025',
+//     action: <Download size={20} />
+//   }
+// ];
 
-const RecentlyGeneratedTable = () => (
+
+const rows = []; // Simulate empty state here
+
+const RecentlyGeneratedTable = () => {
+  const hasData = rows.length > 0;
+
+return (
+<div className="dashboard-table-container">
+    <div><h3 className="section-title">Recently Generated</h3></div>
+    
+    {hasData ? (
   <Table aria-label="sample table">
   <TableHead>
-    <TableRow>
+    <TableRow className="table-head-color">
       <TableHeader>
         Image
       </TableHeader>
@@ -65,7 +77,7 @@ const RecentlyGeneratedTable = () => (
   <TableBody>
     <TableRow>
       <TableCell>
-        <img src="Null" alt="House" width={50} />
+        <img src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -83,12 +95,243 @@ const RecentlyGeneratedTable = () => (
         May 27, 2025
       </TableCell>
       <TableCell>
-        <DocumentPdf size={20} />
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
       </TableCell>
     </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/house.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        838 HOUSTON RD
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        12345
+      </TableCell>
+      <TableCell>
+        Active
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
   </TableBody>
 </Table>
-
+) : (
+  <div className="empty-state">
+    {/* <div ><Button kind="primary">New Search</Button></div> */}
+         
+          <p>You haven’t created any reports yet.</p>
+          <p>
+            You currently have <strong>400</strong> records available to generate new reports.<br />
+            Start by selecting the <strong>New search</strong> button and create your first report.
+          </p>
+          {/* <img src="/empty-folder.svg" alt="No reports" style={{ width: 100, marginBottom: '1rem' }} /> */}
+        </div>
+      )}
+  
+</div>
 );
+};
 
 export default RecentlyGeneratedTable;

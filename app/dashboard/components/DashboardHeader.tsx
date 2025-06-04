@@ -6,7 +6,9 @@ import {
   HeaderNavigation,
   HeaderMenuItem,
   HeaderGlobalBar,
-  HeaderGlobalAction
+  HeaderGlobalAction,
+  OverflowMenu,
+  OverflowMenuItem
 } from '@carbon/react';
 import { UserAvatarFilledAlt } from "@carbon/icons-react";
 import { UserAvatar } from "@carbon/icons-react";
@@ -25,9 +27,21 @@ const HeaderNav = () => (
     </HeaderNavigation>
 
     <HeaderGlobalBar>
-        <HeaderGlobalAction aria-label="User">
-          <UserAvatar />
-        </HeaderGlobalAction>
+          <OverflowMenu
+            className="user-avatar-icon"
+            // renderIcon={UserAvatar}
+            renderIcon={() => <div className="avatar-letter">{"Alex".charAt(0)}</div>}
+            direction="bottom"
+            flipped
+            menuOptionsClass="user-dropdown-menu"
+            iconDescription="Open user menu"
+            aria-label="User menu"
+          >
+            <OverflowMenuItem itemText="Signed in as Alex" disabled />
+            <OverflowMenuItem itemText="Notifications" />
+            <OverflowMenuItem itemText="Settings" />
+            <OverflowMenuItem itemText="Sign out" />
+          </OverflowMenu>
       </HeaderGlobalBar>
   </Header>
 );

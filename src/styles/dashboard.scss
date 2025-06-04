@@ -10,46 +10,316 @@
 // }
 
 
-.dashboard-title {
-  margin: 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
+// .dashboard-title {
+//   margin: 1rem 0;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   margin-top: 2rem;
+// }
+@use '@carbon/react/scss/colors' as colors;
+@use '@carbon/layout' as layout;
+
+.user-avatar-icon {
+  position: relative;
+  background-color: #056c9b !important;
+  padding: 1rem;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    fill: #ffffff; // icon color white for contrast
+  }
 }
 
-.summary-cards-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+// .user-avatar {
+//   background-color: #0980e2 !important;
+//   border-radius: 50%;
+// }
 
-  .card-tile {
+.avatar-letter {
+  width: 32px;
+  height: 32px;
+  //background-color: #0072c3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+// Prevent hover from turning avatar background white
+.bx--header__action:hover {
+  background-color: transparent !important;
+}
+
+.user-dropdown-menu {
+  margin-top: 0.5rem; // Adds spacing between avatar and dropdown
+}
+
+.dashboard-summary {
+  margin-top: 2rem;
+
+  .summary-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .summary-tile {
     flex: 1 1 calc(33.333% - 1rem);
     min-width: 280px;
-    height: 100%;
+    padding: 1.5rem 1rem;;
+    border-radius: 1rem;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    .tile-value-blocks {
+      display: flex;
+      // justify-content: space-between;
+      margin-top: 1rem;
+      gap: 1.5rem;
+
+    .value-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // Ensures left-alignment
+      gap: 0.25rem;
+
+    .tile-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
   }
 }
 
 
-.tile-content {
+//  .tile-subtext {
+//       font-size: 0.75rem;
+//       color: #6f6f6f;
+//       // margin-top: 0.25rem;
+//       margin: 0;
+//     }
+
+
+  //   .region-row {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     font-size: 0.875rem;
+  //     color: #444;
+  //     margin-top: 1rem;
+  //     gap: 1rem;
+  //     margin-bottom: layout.$spacing-07
+
+  //   div {
+  //     white-space: nowrap;
+  //   }
+  // }
+
+
+  .region-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #444;
+    margin-top: 1rem;
+    margin-bottom: layout.$spacing-07;
+
+     .region-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // center number and label
+      text-align: center;
+
+    .region-value {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-left: 1rem;
+    }
+
+    .region-label {
+      font-size: 0.875rem;
+      color: #555;
+      margin-top: 0.50rem;
+    }
+
+    div {
+      white-space: nowrap;
+      line-height: 1.3;
+
+      // Add vertical divider to all but the first item
+      &:not(:first-child) {
+        border-left: 1px solid #ccc;
+        padding-left: 1.5rem;     // Space between line and content
+        //margin-left: 1.5rem;      // Space between content blocks
+      }
+    }
+  }
+  }
+    .tile-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #e8e8e8;
+      padding: 0.5rem;
+      border-radius: 50%;
+      height: 2.5rem;
+      width: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calendar {
+      background-color: #ca4949;
+    }
+    .home {
+      background-color: #85e285;
+    }
+
+    .document {
+      background-color: #24b3cc;
+    }
+
+    .tile-label {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .tile-subtext {
+      font-size: 0.875rem;
+      color: #6f6f6f;
+      margin-top: 0.5rem;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    .muted {
+      color: #999;
+      font-size: 1rem;
+    }
+  }
+}
+
+// .dashboard-table {
+//   margin-top: 1rem;
+//   border-radius: 1rem;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   margin-bottom: 1rem;
+//   padding: 1rem;
+// }
+
+.dashboard-table tbody tr:nth-child(odd) {
+  background-color: #f4f4f4; // light gray for odd rows
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background-color: #ffffff; // white for even rows (optional if default is white)
+}
+
+.table-head-color th{
+  background-color: #056c9b !important;
+  color: white !important;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.section-avm-dashboard {
+  font-size: 1.50rem;
+  font-weight: 600;
+  margin: 4rem 0 1rem 0;
+}
+
+.tile-main-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  margin-top: 1rem;
 
-  svg {
-    flex-shrink: 0;
+  .tile-value {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
+
+   .tile-subtext {
+      font-size: 0.75rem;
+      color: #6f6f6f;
+      // margin-top: 0.25rem;
+      margin: 0;
+    }
+
+
+  .custom-upgrade-button {
+    background-color: #2d9cdb !important; // Light blue like your screenshot
+    color: #ffffff !important;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem !important;
+    height: 2rem !important;
+    border-radius: 0.375rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    &:hover {
+      background-color: #1b84c6 !important; // Hover shade
+    }
+
+    .button-icon {
+      fill: #ffffff;
+    }
+  }
+
 }
 
-.table-container {
-  overflow-x: auto;
-  width: 100%;
-
-  table {
-    min-width: 800px; // Or based on your columns
-  }
+.vertical-divider {
+    width: 1px;
+    height: 2rem;
+    background-color: #ccc;
 }
 
+
+//table layout heigh on empty
+.dashboard-table-container {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow:0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem; /* Or more */
+}
+
+.empty-state {
+  // flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; // Center vertically
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  color: #555;
+  font-weight:500;
+
+  
+}
