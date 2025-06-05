@@ -30,14 +30,14 @@ const HeaderNav = () => (
           <OverflowMenu
             className="user-avatar-icon"
             // renderIcon={UserAvatar}
-            renderIcon={() => <div className="avatar-letter">{"Alex".charAt(0)}</div>}
+            renderIcon={() => <div className="avatar-letter">{"Vinoth".charAt(0)}</div>}
             direction="bottom"
             flipped
             menuOptionsClass="user-dropdown-menu"
             iconDescription="Open user menu"
             aria-label="User menu"
           >
-            <OverflowMenuItem itemText="Signed in as Alex" disabled />
+            <OverflowMenuItem itemText="Signed in as Vinoth" disabled />
             <OverflowMenuItem itemText="Notifications" />
             <OverflowMenuItem itemText="Settings" />
             <OverflowMenuItem itemText="Sign out" />
