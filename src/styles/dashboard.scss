@@ -1,21 +1,3 @@
-// .cardTile {
-//   border-radius: 0.5rem;
-//   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-//   transition: box-shadow 0.3s ease;
-//   background-color: white;
-// }
-
-// .cardTile:hover {
-//   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-// }
-
-
-// .dashboard-title {
-//   margin: 1rem 0;
-//   font-size: 1.5rem;
-//   font-weight: 600;
-//   margin-top: 2rem;
-// }
 @use '@carbon/react/scss/colors' as colors;
 @use '@carbon/layout' as layout;
 
@@ -30,21 +12,17 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
 
   svg {
     fill: #ffffff; // icon color white for contrast
   }
 }
 
-// .user-avatar {
-//   background-color: #0980e2 !important;
-//   border-radius: 50%;
-// }
-
 .avatar-letter {
   width: 32px;
   height: 32px;
-  //background-color: #0072c3;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -85,7 +63,6 @@
 
     .tile-value-blocks {
       display: flex;
-      // justify-content: space-between;
       margin-top: 1rem;
       gap: 1.5rem;
 
@@ -103,30 +80,6 @@
   }
 }
 
-
-//  .tile-subtext {
-//       font-size: 0.75rem;
-//       color: #6f6f6f;
-//       // margin-top: 0.25rem;
-//       margin: 0;
-//     }
-
-
-  //   .region-row {
-  //     display: flex;
-  //     justify-content: space-between;
-  //     font-size: 0.875rem;
-  //     color: #444;
-  //     margin-top: 1rem;
-  //     gap: 1rem;
-  //     margin-bottom: layout.$spacing-07
-
-  //   div {
-  //     white-space: nowrap;
-  //   }
-  // }
-
-
   .region-row {
     display: flex;
     flex-wrap: wrap;
@@ -142,30 +95,30 @@
       align-items: center; // center number and label
       text-align: center;
 
-    .region-value {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-left: 1rem;
-    }
+        .region-value {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-left: 1rem;
+        }
 
-    .region-label {
-      font-size: 0.875rem;
-      color: #555;
-      margin-top: 0.50rem;
-    }
+        .region-label {
+          font-size: 0.875rem;
+          color: #555;
+          margin-top: 0.50rem;
+        }
 
-    div {
-      white-space: nowrap;
-      line-height: 1.3;
+        div {
+          white-space: nowrap;
+          line-height: 1.3;
 
-      // Add vertical divider to all but the first item
-      &:not(:first-child) {
-        border-left: 1px solid #ccc;
-        padding-left: 1.5rem;     // Space between line and content
-        //margin-left: 1.5rem;      // Space between content blocks
+          // Add vertical divider to all but the first item
+          &:not(:first-child) {
+            border-left: 1px solid #ccc;
+            padding-left: 1.5rem;     // Space between line and content
+            //margin-left: 1.5rem;      // Space between content blocks
+          }
+        }
       }
-    }
-  }
   }
     .tile-icon {
       position: absolute;
@@ -214,14 +167,6 @@
   }
 }
 
-// .dashboard-table {
-//   margin-top: 1rem;
-//   border-radius: 1rem;
-//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-//   margin-bottom: 1rem;
-//   padding: 1rem;
-// }
-
 .dashboard-table tbody tr:nth-child(odd) {
   background-color: #f4f4f4; // light gray for odd rows
 }
@@ -239,6 +184,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0.5rem 0 0.5rem 0;
+  padding: 1rem;
 }
 
 .section-avm-dashboard {
@@ -262,13 +208,12 @@
    .tile-subtext {
       font-size: 0.75rem;
       color: #6f6f6f;
-      // margin-top: 0.25rem;
       margin: 0;
     }
 
 
   .custom-upgrade-button {
-    background-color: #2d9cdb !important; // Light blue like your screenshot
+    background-color: #2d9cdb !important;
     color: #ffffff !important;
     font-size: 0.75rem;
     padding: 0.25rem 0.75rem !important;
@@ -317,9 +262,48 @@
   justify-content: center; // Center vertically
   text-align: center;
   padding: 2rem;
-  margin-top: 4rem;
-  color: #555;
-  font-weight:500;
+  // margin-top: 4rem;
 
+  img {
+    width: 150px;        // Customize width
+    height: auto;        // Maintain aspect ratio
+    margin-bottom: 1rem; // Space between image and upper text
+    margin-top: 2rem; // Space between image and lower text
+  }
+
+  .empty-text {
+    font-size: 1.2rem;
+    color: #b3afaf;
+  }
+
+  h1 {
+    color: #056c9b !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  strong {
+    color: #3d3c3c !important;
+  }
+}
+
+.report-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.5rem;
   
+  button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      height: 2rem;
+      font-size: 0.875rem;
+      font-weight: bold;
+      background-color: #2d9cdb !important;
+      color: #fff;
+      width: 8rem;
+    }
 }

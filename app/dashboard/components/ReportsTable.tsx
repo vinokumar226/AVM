@@ -10,8 +10,10 @@ import {
   TableCell,
   Column,
   Link,
-  Button
+  Button,
+  FlexGrid, Row , Grid
 } from '@carbon/react';
+
 import { Download, DocumentPdf } from '@carbon/icons-react';
 
 const headers = [
@@ -45,7 +47,12 @@ const RecentlyGeneratedTable = () => {
 
 return (
 <div className="dashboard-table-container">
-    <div><h3 className="section-title">Recently Generated</h3></div>
+     <Grid>
+      <Column lg={12} md={8} sm={4} className="section-title"> Recently Generated </Column >
+      {!hasData && ( 
+        <Column lg={4} md={8} sm={4} className="report-button"> <Button>New Search</Button></Column>
+      )}
+    </Grid>
     
     {hasData ? (
   <Table aria-label="sample table">
@@ -321,12 +328,13 @@ return (
   <div className="empty-state">
     {/* <div ><Button kind="primary">New Search</Button></div> */}
          
-          <p>You haven’t created any reports yet.</p>
-          <p>
+          <p className="empty-text">You haven’t created any reports yet.</p>
+          <p className="empty-text">
             You currently have <strong>400</strong> records available to generate new reports.<br />
             Start by selecting the <strong>New search</strong> button and create your first report.
           </p>
-          {/* <img src="/empty-folder.svg" alt="No reports" style={{ width: 100, marginBottom: '1rem' }} /> */}
+          <img className="no-reports-found" src="no_reports_found.png" alt="No reports" />
+          <h1>No reports found !</h1>
         </div>
       )}
   

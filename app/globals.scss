@@ -2,6 +2,11 @@
 // @use '@carbon/react' with (
 //   $font-path: null // disables internal font loading
 // );
+// carbon.scss
+@use '@carbon/react' with (
+  $use-flexbox-grid: true
+);
+
 @import '@carbon/styles/css/styles.css';
 @import '@carbon/styles/css/themes.css'; /* Optional, for theme switching */
 @import "tailwindcss";
