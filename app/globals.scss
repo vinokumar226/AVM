@@ -4,11 +4,43 @@
 // );
 // carbon.scss
 @use '@carbon/react' with (
-  $use-flexbox-grid: true
+  $use-flexbox-grid: true,
+  $font-path: null
 );
+
+@use 'typeface-inter';
+// /* In your custom SCSS file */
+// $font-family-base: 'Inter', sans-serif;
+// $font-family-heading: 'Inter', sans-serif;
+// $font-family-ui: 'Inter', sans-serif;
+
+// /* Optional: Update the font weight if needed */
+// $font-weight-regular: 400;
+// $font-weight-bold: 600;
+
+/* Now apply the custom Inter font globally */
+html, body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Optional: Customize Carbon components to use Inter font */
+.bx--btn, .bx--input, .bx--label {
+  font-family: 'Inter', sans-serif;
+}
+
+/* You can also customize headings, etc. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;  /* or other weights you prefer */
+}
 
 @import '@carbon/styles/css/styles.css';
 @import '@carbon/styles/css/themes.css'; /* Optional, for theme switching */
+
+// @import '@carbon/react/scss/css--reset';
+// @import '@carbon/react/scss/css--font-face';
+// @import '@carbon/react/scss/components/notification';
+
 @import "tailwindcss";
 
 :root {

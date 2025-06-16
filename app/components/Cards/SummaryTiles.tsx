@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Grid, Column, Tile, Button  } from '@carbon/react';
 import { Calendar, Document, Home, Upgrade } from '@carbon/icons-react';
