@@ -26,21 +26,21 @@ const headers = [
   { key: 'action', header: 'Action' },
 ];
 
-// const rows = [
-//   {
-//     id: '1',
-//     image: '/house1.jpg',
-//     address: '838 HOUSTON RD',
-//     loan: '12345',
-//     ref: '12345',
-//     status: 'Active',
-//     date: 'May 18, 2025',
-//     action: <Download size={20} />
-//   }
-// ];
+const rows = [
+  {
+    id: '1',
+    image: '/house1.jpg',
+    address: '838 HOUSTON RD',
+    loan: '12345',
+    ref: '12345',
+    status: 'Active',
+    date: 'May 18, 2025',
+    action: <Download size={20} />
+  }
+];
 
 
-const rows = []; // Simulate empty state here
+// const rows = []; // Simulate empty state here
 
 const RecentlyGeneratedTable = () => {
   const hasData = rows.length > 0;
