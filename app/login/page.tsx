@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getTokenFromCookies, validateToken } from '@/lib/auth-server';
 import LoginClient from '../components/Login/Client';
-import '../../src/login.scss';
+import './login.scss';
 
 export default async function LoginPage() {
   const token = getTokenFromCookies();

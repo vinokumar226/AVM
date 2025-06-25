@@ -46,6 +46,6 @@ export const config = {
       - /favicon.ico
       - /api/ (optional: allow public API access)
     */
-    '/((?!_next/static|_next/image|favicon.ico|loan_dna.png|api|login).*)',
+    '/((?!_next/static|_next/image|favicon.ico|avm_logo.png|api|login).*)',
   ],
 };

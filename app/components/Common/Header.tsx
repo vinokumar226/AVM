@@ -18,7 +18,7 @@ import { UserAvatar } from "@carbon/icons-react";
 const HeaderNav = () => (
   <Header aria-label="Loan DNA Dashboard">
     <HeaderName href="/" prefix="">
-      <img src="/loan_dna.png" alt="Logo" style={{ height: 28, marginRight: 12 }} />
+      <img src="/avm_logo.png" alt="Logo" style={{ height: 40, marginRight: 12 }} />
     </HeaderName>
     <HeaderNavigation aria-label="Dashboard Navigation">
       <HeaderMenuItem href="/dashboard">Dashboard</HeaderMenuItem>

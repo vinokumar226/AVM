@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import {
+  Theme,
   Button,
   Form,
   Stack,
@@ -45,7 +46,7 @@ export default function LoginClient() {
   };  
 
   return (
-    <>
+    <Theme theme='white'>
     
     {/* <div className="bx--toast-notification__container"> */}
     {isVisibleToast && (
@@ -72,13 +73,13 @@ export default function LoginClient() {
         )
     }
     
-    <div className="login-background-image">
+    <div className="login-page login-background-image">
       <div className="login-centered-container">
         <Stack gap={4}>
           {/* Logo */}
           <div className="logo-wrapper">
             <img
-              src="/loan_dna.png"
+              src="/avm_logo.png"
               alt="Company Logo"
               className="login-logo"
             />
@@ -117,7 +118,7 @@ export default function LoginClient() {
 
               {/* Login Button */}
               <div className="login-button-wrapper">
-                <Button className="login-button" type="submit" renderIcon={ArrowRight} iconDescription="Login">
+                <Button kind="ghost" className="login-button" type="submit" renderIcon={ArrowRight} iconDescription="Login">
                   Login
                 </Button>
               </div>
@@ -131,6 +132,6 @@ export default function LoginClient() {
         </Stack>
       </div>
     </div>
-    </>
+    </Theme>
   );
 }

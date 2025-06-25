@@ -3,7 +3,7 @@ import { Grid,Column } from '@carbon/react';
 import HeaderNav from '../components/Common/Header';
 import SummaryCards from '../components/Cards/SummaryTiles';
 import RecentlyGenerated from '../components/Reports/ReportsTable';
-import '../../src/styles/dashboard.scss'
+import './dashboard.scss'
 
 export default function Page() {
    return (

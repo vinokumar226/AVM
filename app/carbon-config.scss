@@ -1,0 +1,6 @@
+// carbon-config.scss
+
+@use '@carbon/react' with (
+  //  $font-path: null,
+  $use-flexbox-grid: true
+);
