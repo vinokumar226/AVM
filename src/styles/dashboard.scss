@@ -1,6 +1,7 @@
 @use '@carbon/react/scss/colors' as colors;
 @use '@carbon/layout' as layout;
 
+
 .user-avatar-icon {
   position: relative;
   background-color: #056c9b !important;
@@ -69,8 +70,8 @@
     .value-column {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; // Ensures left-alignment
-      gap: 0.25rem;
+      //align-items: center; // Ensures left-alignment
+      gap: 0.10rem;
 
     .tile-value {
       font-size: 1.25rem;
@@ -135,16 +136,19 @@
     }
 
     .calendar {
-      background-color: #ca4949;
+      background-color: #e98585;
     }
     .home {
-      background-color: #85e285;
+      background-color: #eb83dd;
     }
 
     .document {
-      background-color: #24b3cc;
+      background-color: #64cfe2;
     }
 
+    .notebook {
+      background-color: #5af39f;
+    }
     .tile-label {
       font-weight: 500;
       margin-bottom: 0.25rem;
@@ -307,3 +311,18 @@
       width: 8rem;
     }
 }
+
+
+// .dashboard {
+//   padding: 2rem;
+
+//   .tile {
+//     @include carbon--type-style('body-short-01');
+//     background-color: $ui-01;
+//     padding: 2rem;
+//     border-radius: 8px;
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+//     height: 100%;
+//   }
+// }
+
