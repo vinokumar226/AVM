@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono, Inter } from "next/font/google";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 // import '@carbon/react/css/carbon-components.min.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+// const inter = Inter({
+//   subsets: ['latin'],
+//   variable: '--font-inter',
+// })
 
 import "./globals.scss";
 // import '../src/login.scss';
@@ -35,7 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    // <html lang="en" className={inter.variable}>
+    <html lang="en">
       <body
         className={`antialiased`}
       >

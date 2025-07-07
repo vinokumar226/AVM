@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import {
-  DataTable,
+import { 
   Table,
   TableHead,
   TableRow,
@@ -11,20 +10,11 @@ import {
   Column,
   Link,
   Button,
-  FlexGrid, Row , Grid
+  Grid
 } from '@carbon/react';
 
-import { Download, DocumentPdf } from '@carbon/icons-react';
-
-const headers = [
-  { key: 'image', header: 'Image' },
-  { key: 'address', header: 'Address' },
-  { key: 'loan', header: 'Loan No.' },
-  { key: 'ref', header: 'Reference #' },
-  { key: 'status', header: 'Status' },
-  { key: 'date', header: 'Date Generated' },
-  { key: 'action', header: 'Action' },
-];
+import { DocumentPdf } from '@carbon/icons-react';
+import Image from 'next/image';
 
 // const rows = [
 //   {
@@ -83,8 +73,8 @@ return (
   </TableHead>
   <TableBody>
     <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+      <TableCell>        
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -108,7 +98,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -132,7 +122,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -156,7 +146,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -180,7 +170,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -204,7 +194,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -228,7 +218,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -252,7 +242,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -276,7 +266,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -300,7 +290,7 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+        <Image src="/house.jpg" alt="House" width={50} />
       </TableCell>
       <TableCell>
         838 HOUSTON RD
@@ -333,7 +323,8 @@ return (
             You currently have <strong>400</strong> records available to generate new reports.<br />
             Start by selecting the <strong>New search</strong> button and create your first report.
           </p>
-          <img className="no-reports-found" src="no_reports_found.png" alt="No reports" />
+          {/* <img className="no-reports-found" src="no_reports_found.png" alt="No reports" /> */}
+          <Image src="/no_reports_found.png" alt="No reports" width={120} height={40} className="no-reports-found" />
           <h1>No reports found !</h1>
         </div>
       )}

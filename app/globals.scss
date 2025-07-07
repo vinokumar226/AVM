@@ -1,14 +1,14 @@
 @use '@carbon/layout' as layout; // used in global styles below
 
 @import '@carbon/styles/css/styles.css';
-@import '@carbon/styles/css/themes.css'; // Optional, for theme switching
-@import 'tailwindcss';
+// @import '@carbon/styles/css/themes.css'; // Optional, for theme switching
+// @import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 
-  --cds-font-family-sans: var(--font-inter, 'Inter', sans-serif);
+  // --cds-font-family-sans: var(--font-inter, 'Inter', sans-serif);
 
   // Primary button theming
   --cds-button-primary: #26A3DD;
@@ -25,13 +25,13 @@
 //   }
 // }
 
- @media (prefers-color-scheme: white) {
-  :root {
+//  @media (prefers-color-scheme: white) {
+//   :root {
     
-    --cds-button-primary: #26A3DD;
-    --cds-button-primary-hover: #12699D;
-  }
-}
+//     --cds-button-primary: #26A3DD;
+//     --cds-button-primary-hover: #12699D;
+//   }
+// }
 
 body {
   background-color: var(--background);

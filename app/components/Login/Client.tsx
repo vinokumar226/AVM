@@ -15,12 +15,12 @@ import { ArrowRight } from '@carbon/icons-react';
 import { useRouter } from 'next/navigation';
 import { loginUser } from '@/lib/auth-client';
 import { useToast } from '@/lib/hooks/useToast';
+import Image from 'next/image';
 
 export default function LoginClient() {
   const router = useRouter();
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [password, setPassword] = useState('');  
 
    const {
     isVisibleToast,
@@ -78,10 +78,12 @@ export default function LoginClient() {
         <Stack gap={4}>
           {/* Logo */}
           <div className="logo-wrapper">
-            <img
+            <Image
               src="/avm_logo.png"
-              alt="Company Logo"
+              alt="Company Logo"              
               className="login-logo"
+              width={260}
+              height={60}
             />
           </div>
 
