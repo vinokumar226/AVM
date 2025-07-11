@@ -79,11 +79,11 @@ export default function LoginClient() {
           {/* Logo */}
           <div className="logo-wrapper">
             <Image
-              src="/avm_logo.png"
-              alt="Company Logo"              
+              src="/avm-logo.png"
+              alt="AVM Logo"              
               className="login-logo"
-              width={260}
-              height={60}
+              width={204}
+              height={47}
             />
           </div>
 

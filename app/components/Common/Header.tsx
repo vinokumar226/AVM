@@ -23,9 +23,8 @@ export default function HeaderNav() {
   return (
    <Header aria-label="Loan DNA Dashboard">
       <HeaderName href="/" prefix="">
-        // <img src="/avm_logo.png" alt="Logo" style={{ height: 40, marginRight: 12 }} />
         <Image
-        src="/dashboard-logo.png"
+        src="/avm-logo.png"
         alt="Logo"
         width={204}
         height={47}

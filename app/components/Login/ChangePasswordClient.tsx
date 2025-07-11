@@ -52,7 +52,7 @@ export default function ChangePasswordPage() {
         <div className="login-centered-container">
           <Stack gap={4}>
             <div className="logo-wrapper">
-              <img src="/avm_logo.png" alt="Company Logo" className="login-logo" />
+              <img src="/avm-logo.png" alt="AVM Logo" className="login-logo" />
             </div>
             <h2 className="login-title">Change Password</h2>
 

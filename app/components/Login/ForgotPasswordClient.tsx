@@ -59,7 +59,8 @@ export default function ForgotPasswordClient() {
         <div className="login-centered-container">
           <Stack gap={4}>
             <div className="logo-wrapper">
-              <img src="/avm_logo.png" alt="Company Logo" className="login-logo" />
+              <img src="/avm-logo.png" alt="AVM Logo" className="login-logo" width={204}
+              height={47}/>
             </div>
 
             <h2 className="login-title">Forgot Password</h2>
