@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@carbon/charts-react": "^1.23.13",
     "@carbon/colors": "^11.33.0",
     "@carbon/icons-react": "^11.60.0",
     "@carbon/layout": "^11.36.0",
     "@carbon/react": "^1.82.1",
     "@carbon/styles": "^1.81.0",
     "@react-google-maps/api": "^2.20.6",
+    "date-fns": "^4.1.0",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "leaflet-geosearch": "^4.2.0",

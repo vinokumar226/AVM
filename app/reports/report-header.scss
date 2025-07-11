@@ -1,0 +1,40 @@
+@use '@carbon/colors' as *;
+
+.custom-blue-button {
+  background-color: $cyan-50; // or use hardcoded color if needed
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.75rem 1.25rem; // increases height and controls width
+  min-width: auto;          // allows custom width without Carbon's default min
+
+  font-size: 0.875rem;
+  height: auto;
+
+  &:hover {
+    background-color: #0f7ec8; // optional hover effect
+  }
+}
+
+.custom-header-cell {
+  background-color: #056c9b !important; // blue/cyan-40
+  color: white !important;
+  font-weight: bold;
+  //border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $gray-40 !important; // slightly darker cyan
+    cursor: pointer;
+  }
+}
+
+.clear-filter-button {
+  background-color: #000;
+  color: white;
+  
+}
+
+.clear-filter-button:hover {
+  background-color: #333;
+  color: white;
+}

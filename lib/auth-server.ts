@@ -1,8 +1,8 @@
 // lib/auth-server.ts
 import { cookies } from 'next/headers';
 
-export function getTokenFromCookies(): string | null {
-  const cookieStore = cookies();
+export async function getTokenFromCookies(): Promise<string | null> {
+  const cookieStore = await cookies();
   const token = cookieStore.get('app_token')?.value;
   return token || null;
 }

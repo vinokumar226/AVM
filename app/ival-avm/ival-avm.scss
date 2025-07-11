@@ -1,0 +1,369 @@
+@use '@carbon/colors' as *;
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+.ivalavm-form-container {
+  margin: 5rem 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* This targets the legend inside the FormGroup */
+.custom-legend legend {
+  font-weight: 700;   // Bold
+  font-size: 2rem; // Optional: larger size
+  color: #161616;     // Optional: Carbon's gray-100
+}
+
+.btn-reset {
+  background: $gray-20;
+  color:$black-100;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.btn-submit {
+  background:  $cyan-40;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.help-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/** iVal- Report css **/
+
+.ival-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; // ensures top alignment
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ival-header-center {
+  text-align: center;
+  flex: 1 1 auto;
+  margin-bottom: 0; // remove extra space
+}
+
+.main-title {
+  font-size: 2rem;        // or use var(--cds-heading-04-font-size)
+  font-weight: 800;       // lighter per your request
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-size: 1rem;     // or var(--cds-heading-03-font-size)
+  font-weight: 600;       // default for subheadings
+  color: var(--cds-text-secondary); // optional for visual hierarchy
+  margin-top: 0.5rem;
+}
+
+.ival-download-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.ival-download-button .cds--btn--ghost {
+  background-color: $cyan-50; /* $cyan-40 */
+  color: #ffffff; /* icon color */
+
+  svg {
+    fill: #ffffff !important;
+  }
+
+  &:hover {
+    background-color: #0f7ec8; // Slightly darker hover
+  }
+}
+
+.section-heading {
+  background-color: $cyan-10; // Carbon token: $interactive-01
+  color: $cyan-50;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+// .property-section {
+//   padding: 2rem 1rem;
+// }
+
+// .property-image img {
+//   width: 100%;
+//   height: auto;
+//   border-radius: 4px;
+// }
+
+// .property-meta p {
+//   margin: 4px 0;
+//   font-size: 0.95rem;
+// }
+
+// .characteristics-title {
+//   margin: 1rem 0 0.5rem;
+//   color: #0072c3;
+// }
+
+// .char-grid {
+//   margin-top: 1rem;
+// }
+
+// .char-tile {
+//   background-color: #f4f4f4;
+//   padding: 1rem;
+//   display: flex;
+//   align-items: center;
+//   border-radius: 4px;
+//   height: 100%;
+// }
+
+.tile-box {
+  border: 2px solid $cyan-50; /* Blue border */
+  //border-radius: 6px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+} 
+
+.tile-icon {
+  flex-shrink: 0;
+  color: #0f62fe; // Carbon blue 60
+}
+
+.tile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile-label {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #525252;
+}
+
+.tile-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161616;
+}
+
+.row-spacing {
+  margin-bottom: 1.5rem; // adjust as needed
+}
+
+.property-image {
+  width: 540px;
+  height: 380px;
+  object-fit: cover;
+}
+
+.icon-wrapper {
+  background-color: $cyan-50; /* light blue */
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper svg {
+  fill: white;
+}
+
+
+.property-meta {
+  padding: 1rem 0;
+
+  p {
+    margin-bottom: 0.75rem; // or 1rem if you want even more space
+  }
+
+  p:last-child {
+    margin-bottom: 0; // remove extra space after last item
+  }
+}
+
+
+.char-tile {
+  text-align: center;
+  padding: 1rem;
+}
+
+.disclaimer-tile {
+  background-color: $white-0;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #525252;
+}
+
+.value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.value-block {
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.divider {
+  width: 2px;
+  background-color: $cyan-60;
+  height: 90px;
+}
+
+
+.flex-estimate-scoring-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.estimate-box {
+  flex: 1 1 auto;
+  min-width: 320px;
+}
+
+.highlight-value {
+  font-size: 2rem;   // or use Carbon tokens like var(--cds-heading-03-font-size)
+  font-weight: 800;    // or 600 depending on desired boldness
+  line-height: 1.25;   // adjust as needed for spacing
+}
+
+.value-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.value-block {
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-tile {
+  background-color: white !important;
+}
+
+//Assessor public record & Historical information
+
+.property-records {
+  margin-top: 2rem;
+}
+
+.section-heading {
+  background-color: #e6f5fd;
+  color: #0072c3;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.record-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.record-table th {
+  background-color: #004c7c;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.record-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.record-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+
+
+
+.table-head-color th{
+  background-color: #056c9b !important;
+  color: white !important;
+}
+
+.map-section {
+  margin-top: 2rem;
+
+  .map-row {
+    margin-bottom: 1.5rem;
+  }
+
+  .map-box {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    height: 300px;
+  }
+}
+
+
+//chart
+.chart-border {
+  border: 2px solid $cyan-60; // ← Blue border
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+// .custom-pie-container .bx--chart-holder {
+//   display: grid !important;
+//   grid-template-columns: auto 160px;
+//   gap: 16px;
+//   align-items: center;
+// }
+
+// .custom-pie-container .bx--chart-svg-wrapper {
+//   flex: 0 0 auto;                 /* Prevent it from shrinking */
+// }
+
+// .custom-pie-container .bx--legend-container {
+//   margin-left: -60px;             /* 👈 Pulls legend left toward the pie */
+// }

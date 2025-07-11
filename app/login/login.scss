@@ -1,4 +1,6 @@
-@use '@carbon/react/scss/colors' as colors;
+//@use '@carbon/react/scss/colors' as colors;
+
+@use '@carbon/colors' as *;
 @use '@carbon/layout' as layout;
 
 @use '@carbon/react' with (
@@ -65,21 +67,15 @@
   }
 
   .signup {
-    color: colors.$cyan-40;
+    color: $cyan-50;
   }
 
   .login-button {
-    background-color: var(--cds-button-primary) !important;
-    color: var(--cds-button-primary-text) !important;
+    background:  $cyan-50;
+    color: $white-0;
     border-radius: 5px;
-
-    &:hover,
-    &:focus {
-      background-color: var(--cds-button-primary-hover) !important;
-      color: var(--cds-button-primary-text) !important;
-      box-shadow: none !important;
-      outline: none !important;
-      border-color: inherit !important;
+    &:hover {
+      background: $cyan-60;
     }
   }
 }
