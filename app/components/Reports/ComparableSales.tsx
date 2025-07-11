@@ -42,18 +42,11 @@ const rows = [
 
 //const rows = []; // Simulate empty state here
 
-const RecentlyGeneratedTable = () => {
+const ComparableSalesTable = () => {
   const hasData = rows.length > 0;
 
 return (
 <div className="dashboard-table-container">
-     <Grid>
-      <Column lg={12} md={8} sm={4} className="section-title"> Recently Generated </Column >
-      {!hasData && ( 
-        <Column lg={4} md={8} sm={4} className="report-button"> <Button>New Search</Button></Column>
-      )}
-    </Grid>
-    
     {hasData ? (
   <Table aria-label="sample table">
   <TableHead>
@@ -64,20 +57,41 @@ return (
       <TableHeader>
         Address
       </TableHeader>
-      <TableHeader>
-        Loan No
+       <TableHeader>
+        Similarity
+      </TableHeader>
+       <TableHeader>
+        Distance
+      </TableHeader>
+       <TableHeader>
+        Year Built
       </TableHeader>
       <TableHeader>
-        Reference#
+        Beds
+      </TableHeader>
+      <TableHeader>
+        Home Sq Ft
+      </TableHeader>
+      <TableHeader>
+        Lot Sq Ft
+      </TableHeader>
+      <TableHeader>
+        Property Type
+      </TableHeader>
+      <TableHeader>
+       Sale Price
+      </TableHeader>
+      <TableHeader>
+        Sale Date
+      </TableHeader>
+       <TableHeader>
+        List Price
+      </TableHeader>
+       <TableHeader>
+        List Date
       </TableHeader>
       <TableHeader>
         Status
-      </TableHeader>
-       <TableHeader>
-        Date Generated
-      </TableHeader>
-       <TableHeader>
-        Action
       </TableHeader>
     </TableRow>
   </TableHead>
@@ -90,22 +104,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -114,22 +148,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -138,22 +192,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -162,22 +236,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -186,22 +280,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -210,22 +324,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -234,22 +368,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -258,22 +412,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -282,22 +456,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
     <TableRow>
       <TableCell>
         <img src="/house.jpg" alt="House" width={50} />
@@ -306,22 +500,42 @@ return (
         838 HOUSTON RD
       </TableCell>
       <TableCell>
-        12345
+        98%
       </TableCell>
       <TableCell>
-        12345
+       N/A
       </TableCell>
       <TableCell>
-        Active
+        2002
       </TableCell>
       <TableCell>
-        May 27, 2025
+        4/2.1
       </TableCell>
       <TableCell>
-        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
       </TableCell>
     </TableRow>
-
   </TableBody>
 </Table>
 ) : (
@@ -342,4 +556,4 @@ return (
 );
 };
 
-export default RecentlyGeneratedTable;
+export default ComparableSalesTable;

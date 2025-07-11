@@ -115,19 +115,19 @@ export default function LoginClient() {
 
               {/* Forgot Password */}
               <div className="forgot-password">
-                <Link href="#">Forgot Password?</Link>
+                <Link href="/forgot-password">Forgot Password?</Link>
               </div>
 
               {/* Login Button */}
               <div className="login-button-wrapper">
-                <Button kind="ghost" className="login-button" type="submit" renderIcon={ArrowRight} iconDescription="Login">
+                <Button className="login-button" size="md" type="submit" renderIcon={ArrowRight} iconDescription="Login">
                   Login
                 </Button>
               </div>
 
               {/* Sign Up */}
               <div className="signup-text">
-                Don’t have an account? <Link href="#">Sign Up</Link>
+                Don’t have an account? <Link href="/signup">Sign Up</Link>
               </div>
             </Stack>
           </Form>
