@@ -11,8 +11,10 @@ import {
   Tag,
   FileUploaderItem 
 } from '@carbon/react';
-import { Download, IbmCloudGateKeeper } from '@carbon/icons-react';
+import { Download, IbmCloudGateKeeper, DocumentPdf } from '@carbon/icons-react';
 import PaginatedTable from '../Reports/PaginatedTable';
+
+const FILE_ACCEPT_FORMAT = ['.csv', '.xlsx'];
 
 const headers = [
   { header: 'Batch Name', key: 'batch' },
@@ -33,7 +35,7 @@ const rows = [
     status: <Tag type="red">Processing</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
-        <Download />
+        <DocumentPdf />
       </Button>
     ),
   },
@@ -46,7 +48,7 @@ const rows = [
     status: <Tag type="green">Completed</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
-        <Download />
+        <DocumentPdf />
       </Button>
     ),
   },
@@ -59,7 +61,7 @@ const rows = [
     status: <Tag type="green">Completed</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
-        <Download />
+        <DocumentPdf />
       </Button>
     ),
   },
@@ -72,7 +74,7 @@ const rows = [
     status: <Tag type="green">Completed</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
-        <Download />
+        <DocumentPdf />
       </Button>
     ),
   },
@@ -85,7 +87,7 @@ const rows = [
     status: <Tag type="green">Completed</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
-        <Download />
+        <DocumentPdf />
       </Button>
     ),
   },
@@ -129,12 +131,8 @@ export default function BatchManagement() {
               <p className="cds--file--label">Upload files</p>
               <FileUploaderDropContainer
                 labelText="Drag and drop files here or click to upload"
-                accept={['.csv', '.xlsx']}
+                accept={FILE_ACCEPT_FORMAT}
                 multiple={false}
-                // onAddFiles={(e) => {
-                //   const file = e?.target?.files?.[0];
-                //   if (file) setFileName(file.name);
-                // }}
 
                 onAddFiles={(e) => {
                     const input = e.target as HTMLInputElement;
@@ -154,7 +152,7 @@ export default function BatchManagement() {
                     <FileUploaderItem
                     key={idx}
                     name={name}
-                    status="edit" // or "uploading" / "complete" / "error" as needed
+                    status="edit"
                     onDelete={() =>
                         setFileNames((prev) => prev.filter((_, i) => i !== idx))
                     }
@@ -205,7 +203,7 @@ export default function BatchManagement() {
               flexDirection: 'column',
               justifyContent: 'space-between',
               height: '100%',
-              minHeight: '14rem', // match left side block height roughly
+              minHeight: '14rem',
               gap: '1rem',
             }}
           >
@@ -234,12 +232,10 @@ export default function BatchManagement() {
             {/* Figma-style Sample File box */}
             <div
               style={{
-                // marginTop: '0.5rem',
-                // marginBottom: '0.5rem',
                 border: '1px solid #e0e0e0',
                 padding: '0.75rem',
                 borderRadius: '4px',
-                maxWidth: '400px', // match File Requirements width visually
+                maxWidth: '400px',
               }}
             >
               <div style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>Sample File:</div>

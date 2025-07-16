@@ -11,7 +11,7 @@ import {
 } from '@carbon/react';
 
 import { logoutUser } from '@/lib/auth-client';
-import Image from 'next/image';
+import Logo from '../Common/Logo';
 
 export default function HeaderNav() {
   const router = useRouter();
@@ -23,13 +23,7 @@ export default function HeaderNav() {
   return (
    <Header aria-label="Loan DNA Dashboard">
       <HeaderName href="/" prefix="">
-        <Image
-        src="/avm-logo.png"
-        alt="Logo"
-        width={204}
-        height={47}
-        style={{ marginRight: 12 }}
-      />
+        <Logo />
       </HeaderName>
 
       <HeaderNavigation aria-label="Dashboard Navigation">

@@ -9,6 +9,7 @@ import {
   ToastNotification,
 } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
+import Logo from '../Common/Logo';
 
 export default function ChangePasswordPage() {
   const [oldPassword, setOldPassword] = useState('');
@@ -52,7 +53,7 @@ export default function ChangePasswordPage() {
         <div className="login-centered-container">
           <Stack gap={4}>
             <div className="logo-wrapper">
-              <img src="/avm-logo.png" alt="AVM Logo" className="login-logo" />
+              <Logo />
             </div>
             <h2 className="login-title">Change Password</h2>
 

@@ -7,42 +7,54 @@
   margin-top: 1rem;
 }
 
-.form-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  justify-content: flex-end;
-}
-.ivalavm-form-container {
-  margin: 5rem 0.5rem;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
+// .form-actions {
+//   margin-top: 2rem;
+//   display: flex;
+//   gap: 1rem;
+//   justify-content: flex-end;
+//   flex-wrap: wrap;
+
+//   button {
+//     min-width: 120px;
+//   }
+// }
+// .ivalavm-form-container {
+//   margin: 5rem 0.5rem;
+//   padding: 2rem;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   border-radius: 8px;
+// }
+
 
 /* This targets the legend inside the FormGroup */
+// .custom-legend legend {
+//   font-weight: 700;   // Bold
+//   font-size: 2rem; // Optional: larger size
+//   color: #161616;     // Optional: Carbon's gray-100
+// }
+
 .custom-legend legend {
-  font-weight: 700;   // Bold
-  font-size: 2rem; // Optional: larger size
-  color: #161616;     // Optional: Carbon's gray-100
+  font-weight: 700;
+  font-size: 2rem;
+  color: #161616;
 }
 
+
 .btn-reset {
-  background: $gray-20;
-  color:$black-100;
+  background: $gray-20 !important;
+  color: $black-100;
   border-radius: 0.5rem;
-  text-align: center;
 }
 
 .btn-submit {
-  background:  $cyan-40;
+  background: $cyan-40 !important;
+  color: white;
   border-radius: 0.5rem;
-  text-align: center;
 }
 
 .help-icon {
-    display: flex;
-    justify-content: flex-end;
+   display: flex;
+  justify-content: flex-end;
 }
 
 /** iVal- Report css **/
@@ -104,39 +116,6 @@
   font-weight: 600;
   font-size: 1.1rem;
 }
-
-// .property-section {
-//   padding: 2rem 1rem;
-// }
-
-// .property-image img {
-//   width: 100%;
-//   height: auto;
-//   border-radius: 4px;
-// }
-
-// .property-meta p {
-//   margin: 4px 0;
-//   font-size: 0.95rem;
-// }
-
-// .characteristics-title {
-//   margin: 1rem 0 0.5rem;
-//   color: #0072c3;
-// }
-
-// .char-grid {
-//   margin-top: 1rem;
-// }
-
-// .char-tile {
-//   background-color: #f4f4f4;
-//   padding: 1rem;
-//   display: flex;
-//   align-items: center;
-//   border-radius: 4px;
-//   height: 100%;
-// }
 
 .tile-box {
   border: 2px solid $cyan-50; /* Blue border */
@@ -353,17 +332,41 @@
   margin-bottom: 1rem;
 }
 
-// .custom-pie-container .bx--chart-holder {
-//   display: grid !important;
-//   grid-template-columns: auto 160px;
-//   gap: 16px;
-//   align-items: center;
-// }
 
-// .custom-pie-container .bx--chart-svg-wrapper {
-//   flex: 0 0 auto;                 /* Prevent it from shrinking */
-// }
 
-// .custom-pie-container .bx--legend-container {
-//   margin-left: -60px;             /* 👈 Pulls legend left toward the pie */
-// }
+//Form address search new scss
+
+.ivalavm-form-container {
+  margin: 5rem 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.custom-grid .bx--grid--full-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.form-row {
+  margin-bottom: 2rem; // adjust as needed
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-submit {
+  background-color: #0f62fe;
+}
+
+.btn-reset {
+  background-color: #e0e0e0;
+  color: #000;
+}

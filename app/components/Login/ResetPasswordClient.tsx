@@ -10,6 +10,7 @@ import {
   ToastNotification,
 } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
+import Logo from '../Common/Logo';
 
 export default function ResetPasswordPage() {
   const router = useRouter();
@@ -61,7 +62,7 @@ export default function ResetPasswordPage() {
         <div className="login-centered-container">
           <Stack gap={4}>
             <div className="logo-wrapper">
-              <img src="/avm_logo.png" alt="AVM Logo" className="login-logo" />
+              <Logo />
             </div>
             <h2 className="login-title">Reset Password</h2>
 

@@ -59,16 +59,16 @@ export default function IValReport() {
           </Heading>
         </div>
         <div className="ival-download-button">
-          <IconButton  className="custom-download-btn" size="lg" label="Download PDF" kind="ghost">
+          <IconButton  className="custom-download-btn" size="lg" label="Download PDF" kind="ghost" align="bottom" onClick={() => console.log("Downloading PDF")}>
             <GeneratePdf />
           </IconButton>
-          <IconButton  className="custom-download-btn" size="lg" label="Download Excel" kind="ghost">
+          <IconButton  className="custom-download-btn" size="lg" label="Download Excel" kind="ghost" align="bottom" onClick={() => console.log("Download Excel")}>
             <DocumentDownload />
           </IconButton>
-          <IconButton  className="custom-download-btn" size="lg" label="Download UAD XML" kind="ghost">
+          <IconButton  className="custom-download-btn" size="lg" label="Download UAD XML" kind="ghost" align="bottom" onClick={() => console.log("Download UAD XML")}>
             <DocumentDownload />
           </IconButton>
-          <IconButton  className="custom-download-btn" size="lg" label="Download JSON" kind="ghost">
+          <IconButton  className="custom-download-btn" size="lg" label="Download JSON" kind="ghost" align="bottom" onClick={() => console.log("Download JSON")}>
             <Json />
           </IconButton>
         </div>
@@ -290,15 +290,15 @@ export default function IValReport() {
       </Column> */}
 
       {/* Tables Placeholders */}
-      <Column lg={16}>
+      <Column lg={16} sm={4} md={8}>
         <div className="section-heading">Map Identifying</div>
         <MapSection />
       </Column>
-      <Column lg={16}>
+      <Column lg={16} sm={4} md={8}>
         <div className="section-heading">Comparable Sales</div>
         <ComparableSalesTable />
       </Column>
-       <Column lg={16}>
+       <Column lg={16} sm={4} md={8}>
         <div className="section-heading">Charts</div>
           <FlexGrid fullWidth>
             <Row>

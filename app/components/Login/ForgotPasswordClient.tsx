@@ -13,6 +13,7 @@ import {
 import { ArrowRight } from '@carbon/icons-react';
 import { useToast } from '@/lib/hooks/useToast';
 import { useRouter } from 'next/navigation';
+import Logo from '../Common/Logo';
 
 export default function ForgotPasswordClient() {
   const router = useRouter();
@@ -59,8 +60,7 @@ export default function ForgotPasswordClient() {
         <div className="login-centered-container">
           <Stack gap={4}>
             <div className="logo-wrapper">
-              <img src="/avm-logo.png" alt="AVM Logo" className="login-logo" width={204}
-              height={47}/>
+              <Logo />
             </div>
 
             <h2 className="login-title">Forgot Password</h2>

@@ -1,129 +1,138 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
-  Button,
-  Form,
+  FlexGrid,
+  Row,
+  Column,
   TextInput,
-  Dropdown,
-  ToastNotification,
+  Button,
   Theme,
-  Stack,
-  FormGroup
-} from '@carbon/react';
-import { useToast } from '@/lib/hooks/useToast';
-import { Help,Add } from '@carbon/icons-react';
-import IValReport from './IvalReport';
+  Form,
+} from "@carbon/react";
+//import "./YourFormStyles.scss"; // Update this to your actual SCSS file name
 
-export default function IValAVMForm() {
+const AddressSearchForm = () => {
   const [formData, setFormData] = useState({
-    address: '',
-    state: null,
-    firstName: '',
-    apn: '',
-    city: null,
-    zip: '',
-    lastName: '',
-    loan: '',
-    reference: '',
+    address: "",
+    zip: "",
+    unit: "",
+    owner: "",
+    apn: "",
+    loan: "",
+    reference: "",
   });
 
-  const {
-    isVisibleToast,
-    message,
-    title,
-    kind,
-    showToast,
-    hideToast,
-  } = useToast();
-
-  const handleChange = (key: string) => (value: any) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    showToast('success', 'Submitted', 'Form submitted successfully!');
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
   };
 
   const handleReset = () => {
     setFormData({
-      address: '',
-      state: null,
-      firstName: '',
-      apn: '',
-      city: null,
-      zip: '',
-      lastName: '',
-      loan: '',
-      reference: '',
+      address: "",
+      zip: "",
+      unit: "",
+      owner: "",
+      apn: "",
+      loan: "",
+      reference: "",
     });
   };
 
-  const stateItems = [
-    { id: 'ca', text: 'California' },
-    { id: 'ny', text: 'New York' },
-    { id: 'tx', text: 'Texas' },
-  ];
-
-  const cityItems = [
-    { id: 'la', text: 'Los Angeles' },
-    { id: 'sf', text: 'San Francisco' },
-    { id: 'nyc', text: 'New York' },
-  ];
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form Submitted:", formData);
+    // Submit logic here (e.g., API call)
+  };
 
   return (
     <Theme theme="white">
-      {isVisibleToast && (
-        <div className="toast-container">
-          <ToastNotification
-            kind={kind}
-            title={title}
-            subtitle={message}
-            onClose={hideToast}
-            timeout={5000}
-            lowContrast
-          />
-        </div>
-      )}
-    <div className='ivalavm-form-container'>
-        <Form>
-            <FormGroup legendText="i-Val® AVM" legendId="avm-legend" className="custom-legend">
-                <div className="help-icon"><Help size="24"/> </div>
-                <div className="form-grid">
-                <TextInput id="address" labelText="Address" />
-                <Dropdown
-                    id="city"
-                    titleText="City"
-                    label="Select City"
-                    items={cityItems}
-                    itemToString={(item) => item?.text ?? ''}
+      <div className="ivalavm-form-container">
+        <Form onSubmit={handleSubmit}>
+          <FlexGrid fullWidth>
+            <Row className="form-row">
+              <Column lg={8} md={8} sm={16}>
+                <TextInput
+                  id="address"
+                  labelText="Address"
+                  value={formData.address}
+                  onChange={handleChange}
                 />
-                <Dropdown
-                    id="state"
-                    titleText="State"
-                    label="Select State"
-                    items={stateItems}
-                    itemToString={(item) => item?.text ?? ''}
+              </Column>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="zip"
+                  labelText="ZIP"
+                  value={formData.zip}
+                  onChange={handleChange}
                 />
-                <TextInput id="zip" labelText="ZIP" />
-                <TextInput id="firstName" labelText="Owner Name (Last Nmae, First Name)" />
-                <TextInput id="apn" labelText="APN" />
-                <TextInput id="loan" labelText="Loan #" />
-                <TextInput id="lastName" labelText="Reference #" />
-                </div>
+              </Column>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="unit"
+                  labelText="Unit"
+                  value={formData.unit}
+                  onChange={handleChange}
+                />
+              </Column>
+            </Row>
+            <Row form-row>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="owner"
+                  labelText="Owner Name"
+                  value={formData.owner}
+                  onChange={handleChange}
+                />
+              </Column>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="apn"
+                  labelText="APN"
+                  value={formData.apn}
+                  onChange={handleChange}
+                />
+              </Column>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="loan"
+                  labelText="Loan #"
+                  value={formData.loan}
+                  onChange={handleChange}
+                />
+              </Column>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="reference"
+                  labelText="Reference #"
+                  value={formData.reference}
+                  onChange={handleChange}
+                />
+              </Column>
+            </Row>
+          </FlexGrid>
 
-                <div className="form-actions">
-                <Button className='btn-reset'>Reset</Button>
-                <Button className='btn-submit'>Submit</Button>
-                </div>
-            </FormGroup>
+          <div className="form-actions">
+            <Button
+              kind="secondary"
+              type="button"
+              className="btn-reset"
+              onClick={handleReset}
+            >
+              Reset
+            </Button>
+            <Button kind="primary" type="submit" className="btn-submit">
+              Submit
+            </Button>
+          </div>
         </Form>
-        </div>
-
-        <div>
-            <IValReport />
-        </div>
+      </div>
     </Theme>
   );
-}
+};
+
+export default AddressSearchForm;

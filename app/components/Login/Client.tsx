@@ -15,7 +15,7 @@ import { ArrowRight } from '@carbon/icons-react';
 import { useRouter } from 'next/navigation';
 import { loginUser } from '@/lib/auth-client';
 import { useToast } from '@/lib/hooks/useToast';
-import Image from 'next/image';
+import Logo from '../Common/Logo';
 
 export default function LoginClient() {
   const router = useRouter();
@@ -78,13 +78,7 @@ export default function LoginClient() {
         <Stack gap={4}>
           {/* Logo */}
           <div className="logo-wrapper">
-            <Image
-              src="/avm-logo.png"
-              alt="AVM Logo"              
-              className="login-logo"
-              width={204}
-              height={47}
-            />
+            <Logo />
           </div>
 
           {/* Title */}
