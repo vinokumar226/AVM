@@ -7,55 +7,6 @@
   margin-top: 1rem;
 }
 
-// .form-actions {
-//   margin-top: 2rem;
-//   display: flex;
-//   gap: 1rem;
-//   justify-content: flex-end;
-//   flex-wrap: wrap;
-
-//   button {
-//     min-width: 120px;
-//   }
-// }
-// .ivalavm-form-container {
-//   margin: 5rem 0.5rem;
-//   padding: 2rem;
-//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-//   border-radius: 8px;
-// }
-
-
-/* This targets the legend inside the FormGroup */
-// .custom-legend legend {
-//   font-weight: 700;   // Bold
-//   font-size: 2rem; // Optional: larger size
-//   color: #161616;     // Optional: Carbon's gray-100
-// }
-
-.custom-legend legend {
-  font-weight: 700;
-  font-size: 2rem;
-  color: #161616;
-}
-
-
-.btn-reset {
-  background: $gray-20 !important;
-  color: $black-100;
-  border-radius: 0.5rem;
-}
-
-.btn-submit {
-  background: $cyan-40 !important;
-  color: white;
-  border-radius: 0.5rem;
-}
-
-.help-icon {
-   display: flex;
-  justify-content: flex-end;
-}
 
 /** iVal- Report css **/
 
@@ -87,26 +38,7 @@
   margin-top: 0.5rem;
 }
 
-.ival-download-button {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  align-items: center;
-  border-radius: 1rem;
-}
 
-.ival-download-button .cds--btn--ghost {
-  background-color: $cyan-50; /* $cyan-40 */
-  color: #ffffff; /* icon color */
-
-  svg {
-    fill: #ffffff !important;
-  }
-
-  &:hover {
-    background-color: #0f7ec8; // Slightly darker hover
-  }
-}
 
 .section-heading {
   background-color: $cyan-10; // Carbon token: $interactive-01
@@ -153,11 +85,7 @@
   margin-bottom: 1.5rem; // adjust as needed
 }
 
-.property-image {
-  width: 540px;
-  height: 380px;
-  object-fit: cover;
-}
+
 
 .icon-wrapper {
   background-color: $cyan-50; /* light blue */
@@ -173,17 +101,17 @@
 }
 
 
-.property-meta {
-  padding: 1rem 0;
+// .property-meta {
+//   padding: 1rem 0;
 
-  p {
-    margin-bottom: 0.75rem; // or 1rem if you want even more space
-  }
+//   p {
+//     margin-bottom: 0.75rem; // or 1rem if you want even more space
+//   }
 
-  p:last-child {
-    margin-bottom: 0; // remove extra space after last item
-  }
-}
+//   p:last-child {
+//     margin-bottom: 0; // remove extra space after last item
+//   }
+// }
 
 
 .char-tile {
@@ -340,11 +268,11 @@
   margin: 5rem 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: #fff;
 }
 
-.custom-grid .bx--grid--full-width {
+.custom-grid {
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-left: 0 !important;
@@ -360,13 +288,326 @@
   justify-content: flex-end;
   gap: 1rem;
   margin-top: 2rem;
-}
-
-.btn-submit {
-  background-color: #0f62fe;
+  // margin-right: 2rem;
 }
 
 .btn-reset {
-  background-color: #e0e0e0;
-  color: #000;
+  background: $gray-20 !important;
+  color: $black-100;
+  border-radius: 0.25rem;
+}
+
+.btn-submit {
+  background: $cyan-40 !important;
+  color: white;
+  border-radius: 0.25rem;
+}
+
+.btn-submit,
+.btn-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-align: center;
+  height: 32px;
+}
+
+.custom-legend legend {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #161616;
+  margin-bottom: 1.5rem;
+}
+
+.help-icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.form-legend {
+  position: relative;
+}
+
+@media (max-width: 321px) {
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-reset,
+  .btn-submit {
+    width: 100%;
+  }
+
+  .custom-grid .bx--col {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .custom-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .custom-legend legend {
+    font-size: 1.5rem; // slightly smaller text
+  }
+
+  .help-icon {
+    position: relative;  // Remove absolute positioning
+    align-self: flex-end;
+    margin-top: 0.25rem;
+  }
+}
+
+
+//ival report estimated and download pdf, excel ...//
+@media (max-width: 991px) {
+  .ival-download-button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .value-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .value-block {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+legend {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .ival-header-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ival-download-button {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.ival-download-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.ival-download-button .cds--btn--ghost {
+  background-color: $cyan-50; /* $cyan-40 */
+  color: #ffffff; /* icon color */
+
+  svg {
+    fill: #ffffff !important;
+  }
+
+  &:hover {
+    background-color: #0f7ec8; // Slightly darker hover
+  }
+}
+
+.ival-download-button .cds--btn--ghost svg {
+    fill: #ffffff !important;
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.ival-download-button .cds--btn--icon-only {
+    border-radius: 8px !important;
+    box-shadow: 2px 2px 8px 1px #cccccc !important;
+    padding: 10px 0px !important;
+}
+
+
+//Property details
+
+.property-details-grid {
+  row-gap: 1rem;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+
+  .property-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 0;
+  }
+
+  .property-meta {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      margin: 0.2rem 0;
+
+      span {
+        color: #5a5a5a;
+        font-weight: 400;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .characteristics-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #0f62fe;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .char-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; // spacing between tiles
+
+    .char-item {
+      width: calc(33.333% - 1rem); // 3 columns with gap
+
+      // .tile-box {
+      //   display: flex;
+      //   border: 1px solid #0f62fe;
+      //   border-radius: 6px;
+      //   overflow: hidden; // Ensures the border radius applies
+
+      //   .tile-icon-container {
+      //     background-color: #0f62fe;
+      //     padding: 0.75rem;
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     min-width: 48px;
+
+      //     svg {
+      //       color: white;
+      //       width: 20px;
+      //       height: 20px;
+      //     }
+      //   }
+
+      //   .tile-icon {
+      //     color: #0f62fe;
+      //     margin-right: 0.75rem;
+      //   }
+
+      //   .tile-text {
+      //     padding: 0.5rem 0.75rem;
+      //     display: flex;
+      //     flex-direction: column;
+      //     justify-content: center;
+      //     .tile-label {
+      //       font-size: 0.8rem;
+      //       color: #6f6f6f;
+      //     }
+
+      //     .tile-value {
+      //       font-size: 1rem;
+      //       font-weight: 600;
+      //     }
+      //   }
+      // }
+      .tile-box {
+        display: flex;
+        width: 100%;
+        height: 64px;
+        border: 1px solid #0f62fe;
+        border-radius: 6px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .tile-left {
+        background-color: #0f62fe;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .tile-icon-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            color: white;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .tile-text {
+        width: 50%;
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: nowrap;
+
+        .tile-label {
+          font-size: 0.7rem;
+          color: #6f6f6f;
+          margin-bottom: 0.1rem;
+          line-height: 1;
+        }
+
+        .tile-value {
+          font-size: 0.85rem;
+          font-weight: 600;
+          line-height: 1;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+    }
+  }
+}
+
+// Mobile tweaks
+@media screen and (max-width: 768px) {
+  .characteristics-title {
+    margin-top: 1.5rem;
+  }
+
+  .char-grid {
+    flex-direction: column;
+
+    .char-item {
+      width: 100%;
+    }
+  }
 }

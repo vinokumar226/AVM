@@ -9,8 +9,10 @@ import {
   Button,
   Theme,
   Form,
+  FormGroup
 } from "@carbon/react";
-//import "./YourFormStyles.scss"; // Update this to your actual SCSS file name
+import { Help } from '@carbon/icons-react';
+import IValReport from './IvalReport';
 
 const AddressSearchForm = () => {
   const [formData, setFormData] = useState({
@@ -52,22 +54,17 @@ const AddressSearchForm = () => {
   return (
     <Theme theme="white">
       <div className="ivalavm-form-container">
-        <Form onSubmit={handleSubmit}>
-          <FlexGrid fullWidth>
+        <Form className="form-legend" onSubmit={handleSubmit}>
+          <FormGroup legendText="i-Val® AVM" legendId="avm-legend" className="custom-legend">
+            <div className="help-icon"><Help size="24"/> </div>
+          <FlexGrid fullWidth className="custom-grid">
             <Row className="form-row">
               <Column lg={8} md={8} sm={16}>
                 <TextInput
                   id="address"
-                  labelText="Address"
+                  labelText="Address *"
+                  placeholder="Address"
                   value={formData.address}
-                  onChange={handleChange}
-                />
-              </Column>
-              <Column lg={4} md={4} sm={16}>
-                <TextInput
-                  id="zip"
-                  labelText="ZIP"
-                  value={formData.zip}
                   onChange={handleChange}
                 />
               </Column>
@@ -75,16 +72,27 @@ const AddressSearchForm = () => {
                 <TextInput
                   id="unit"
                   labelText="Unit"
+                  placeholder="Unit"
                   value={formData.unit}
                   onChange={handleChange}
                 />
               </Column>
+              <Column lg={4} md={4} sm={16}>
+                <TextInput
+                  id="zip"
+                  labelText="ZIP"
+                  placeholder="Zip"
+                  value={formData.zip}
+                  onChange={handleChange}
+                />
+              </Column>
             </Row>
-            <Row form-row>
+            <Row className="form-row">
               <Column lg={4} md={4} sm={16}>
                 <TextInput
                   id="owner"
                   labelText="Owner Name"
+                  placeholder="Owner Name"
                   value={formData.owner}
                   onChange={handleChange}
                 />
@@ -93,6 +101,7 @@ const AddressSearchForm = () => {
                 <TextInput
                   id="apn"
                   labelText="APN"
+                  placeholder="APN"
                   value={formData.apn}
                   onChange={handleChange}
                 />
@@ -101,6 +110,7 @@ const AddressSearchForm = () => {
                 <TextInput
                   id="loan"
                   labelText="Loan #"
+                  placeholder="Loan"
                   value={formData.loan}
                   onChange={handleChange}
                 />
@@ -109,6 +119,7 @@ const AddressSearchForm = () => {
                 <TextInput
                   id="reference"
                   labelText="Reference #"
+                  placeholder="Reference"
                   value={formData.reference}
                   onChange={handleChange}
                 />
@@ -122,14 +133,20 @@ const AddressSearchForm = () => {
               type="button"
               className="btn-reset"
               onClick={handleReset}
+              size="md"
             >
               Reset
             </Button>
-            <Button kind="primary" type="submit" className="btn-submit">
+            <Button kind="primary" size="md" type="submit" className="btn-submit">
               Submit
             </Button>
           </div>
+          </FormGroup>
         </Form>
+      </div>
+
+      <div>
+        <IValReport />
       </div>
     </Theme>
   );

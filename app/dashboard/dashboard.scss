@@ -1,10 +1,8 @@
 @use '@carbon/react/scss/colors' as colors;
 @use '@carbon/layout' as layout;
 
-@use '@carbon/react' with (
-  //  $font-path: null,
-  $use-flexbox-grid: true
-);
+@use '@carbon/react' with ( //  $font-path: null,
+  $use-flexbox-grid: true);
 
 .user-avatar-icon {
   position: relative;
@@ -50,14 +48,15 @@
 
   .summary-row {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 1rem;
   }
 
   .summary-tile {
     flex: 1 1 calc(33.333% - 1rem);
     min-width: 280px;
-    padding: 1.5rem 1rem;;
+    padding: 1.5rem 1rem;
+    ;
     border-radius: 1rem;
     position: relative;
     display: flex;
@@ -70,35 +69,47 @@
       display: flex;
       margin-top: 1rem;
       gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
 
-    .value-column {
-      display: flex;
-      flex-direction: column;
-      //align-items: center; // Ensures left-alignment
-      gap: 0.10rem;
 
-    .tile-value {
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.2;
+
+      .value-column {
+        display: flex;
+        flex-direction: column;
+        //align-items: center; // Ensures left-alignment
+        gap: 0.10rem;
+
+        .tile-value {
+          font-size: 1.25rem;
+          font-weight: 600 !important;
+          line-height: 1.2;
+        }
+
+        // .prop-values {
+        //   text-align: center;
+        // }
+      }
+
+
+
+
     }
-  }
-}
 
-  .region-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-    font-size: 0.875rem;
-    color: #444;
-    margin-top: 1rem;
-    margin-bottom: layout.$spacing-07;
-
-     .region-item {
+    .region-row {
       display: flex;
-      flex-direction: column;
-      align-items: center; // center number and label
-      text-align: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: #444;
+      margin-top: 1rem;
+      margin-bottom: layout.$spacing-07;
+
+      .region-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // center number and label
+        text-align: center;
 
         .region-value {
           font-size: 1rem;
@@ -119,12 +130,13 @@
           // Add vertical divider to all but the first item
           &:not(:first-child) {
             border-left: 1px solid #ccc;
-            padding-left: 1.5rem;     // Space between line and content
+            padding-left: 1.5rem; // Space between line and content
             //margin-left: 1.5rem;      // Space between content blocks
           }
         }
       }
-  }
+    }
+
     .tile-icon {
       position: absolute;
       top: 1rem;
@@ -142,6 +154,7 @@
     .calendar {
       background-color: #e98585;
     }
+
     .home {
       background-color: #eb83dd;
     }
@@ -153,6 +166,7 @@
     .notebook {
       background-color: #5af39f;
     }
+
     .tile-label {
       font-weight: 500;
       margin-bottom: 0.25rem;
@@ -183,7 +197,7 @@
   background-color: #ffffff; // white for even rows (optional if default is white)
 }
 
-.table-head-color th{
+.table-head-color th {
   background-color: #056c9b !important;
   color: white !important;
 }
@@ -213,11 +227,11 @@
     font-weight: 500;
   }
 
-   .tile-subtext {
-      font-size: 0.75rem;
-      color: #6f6f6f;
-      margin: 0;
-    }
+  .tile-subtext {
+    font-size: 0.75rem;
+    color: #6f6f6f;
+    margin: 0;
+  }
 
 
   .custom-upgrade-button {
@@ -243,9 +257,9 @@
 }
 
 .vertical-divider {
-    width: 1px;
-    height: 2rem;
-    background-color: #ccc;
+  width: 1px;
+  height: 2rem;
+  background-color: #ccc;
 }
 
 
@@ -255,11 +269,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-shadow:0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   margin-top: 1rem;
   padding: 1rem;
-  margin-bottom: 1rem; /* Or more */
+  margin-bottom: 1rem;
+  /* Or more */
 }
 
 .empty-state {
@@ -273,8 +288,8 @@
   // margin-top: 4rem;
 
   img {
-    width: 150px;        // Customize width
-    height: auto;        // Maintain aspect ratio
+    width: 150px; // Customize width
+    height: auto; // Maintain aspect ratio
     margin-bottom: 1rem; // Space between image and upper text
     margin-top: 2rem; // Space between image and lower text
   }
@@ -300,20 +315,20 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 0.5rem;
-  
+
   button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 0.5rem;
-      padding: 0.25rem 0.75rem;
-      height: 2rem;
-      font-size: 0.875rem;
-      font-weight: bold;
-      background-color: #2d9cdb !important;
-      color: #fff;
-      width: 8rem;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    height: 2rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    background-color: #2d9cdb !important;
+    color: #fff;
+    width: 8rem;
+  }
 }
 
 
@@ -329,4 +344,3 @@
 //     height: 100%;
 //   }
 // }
-
