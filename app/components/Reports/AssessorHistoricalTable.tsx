@@ -49,13 +49,14 @@ const historicalRows = [
 
 const DualTableLayout = () => {
   return (
-    <FlexGrid fullWidth>
+    <FlexGrid fullWidth className='custom-grid'>
       <Row>
         <Column lg={8} md={4} sm={4}>
-          <TableContainer title="Assessor/Public Record">
+          {/* <TableContainer title="Assessor/Public Record"> */}
+          <div className="section-heading">Assessor/Public Record</div>
             <Table>
               <TableHead>
-                <TableRow>
+                <TableRow className="table-head-color">
                   <TableHeader>Assessor</TableHeader>
                   <TableHeader>Public Record Information</TableHeader>
                 </TableRow>
@@ -69,14 +70,15 @@ const DualTableLayout = () => {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer>
+          {/* </TableContainer> */}
         </Column>
 
         <Column lg={8} md={4} sm={4}>
-          <TableContainer title="Historical Information">
+          {/* <TableContainer title="Historical Information"> */}
+          <div className="section-heading">Historical Information</div>
             <Table>
               <TableHead>
-                <TableRow>
+                <TableRow className="table-head-color">
                   {historicalHeaders.map((header) => (
                     <TableHeader key={header.key}>{header.header}</TableHeader>
                   ))}
@@ -92,7 +94,7 @@ const DualTableLayout = () => {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer>
+          {/* </TableContainer> */}
         </Column>
       </Row>
     </FlexGrid>

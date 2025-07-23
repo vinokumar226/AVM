@@ -1,5 +1,5 @@
 export default {
-  title: 'Average or Median Sales Price',
+  title: 'Average Sales Price',
   axes: {
     left: {
       title: 'Median Time',

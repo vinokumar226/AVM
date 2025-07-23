@@ -1,18 +1,30 @@
 export default [
   {
-    group: '<1000',
-    value: 5.9
+    group: '120-129',
+    value: 0.5
   },
   {
-    group: '1001-1500',
+    group: '130-139',
+    value: 1.9
+  },
+  {
+    group: '140-149',
+    value: 2.3
+  },
+  {
+    group: '150-159',
+    value: 5.4
+  },
+  {
+    group: '160-169',
     value: 10
   },
   {
-    group: '1501-2000',
-    value: 16
+    group: '170-179',
+    value: 13.5
   },
   {
-    group: '2001-2500',
-    value: 8
+    group: '180-189',
+    value: 6.9
   }
 ]

@@ -16,7 +16,7 @@
 // }, {} as Record<string, string>);
 
 export default {
-  title: 'Average or Median Price Per Square Feet',
+  title: 'Average Price Per Square Feet',
   axes: {
     left: {
       title: 'Avg price/Sq Ft',

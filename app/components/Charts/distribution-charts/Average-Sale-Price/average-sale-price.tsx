@@ -1,4 +1,3 @@
-// components/BarChart.tsx
 'use client';
 
 import React from 'react';
@@ -10,9 +9,9 @@ import options from './options';
 
 const AverageSalePrice: React.FC = () => {
   return (
-    <div className='chart-border'>
+    <div className="chart-border">
       <SimpleBarChart data={data} options={options} />
-      </div>
+    </div>
   );
 };
 

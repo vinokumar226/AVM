@@ -611,3 +611,11 @@ label {
     }
   }
 }
+
+
+
+/* Make the line thicker */
+.cc-chart svg path[d^="M"][stroke]:not([fill]) {
+  stroke-width: 4px !important;
+}
+

@@ -1,14 +1,18 @@
 import { ScaleTypes } from '@carbon/charts';
 
 export default {
-  title: 'Historical Sales For Neighborhood',
+  title: 'Historical Sales For ZIP (90024)',
+  bar: {
+    maxWidth: 22,
+    width: 4,
+  },
   axes: {
     left: {
       mapsTo: 'value',
       title: 'Number of Sales',
-      domain: [18, 25],
+      domain: [0, 16],
       ticks: {
-        values: [18,20,22,25]
+        values: [0, 2, 4, 6, 8, 10, 12, 14, 16 ]
       },
       tickFormat: (d: number) => d.toString(), // No decimals, "K" suffix
     },
@@ -16,19 +20,22 @@ export default {
       mapsTo: 'group',
       scaleType: ScaleTypes.LABELS,
       title: 'Months',
+      //spacingFactor: 0.1,
     }
   },
   color: {
     // Colors will be applied in order to each 'group'
     
     scale: {
-    'Jan 2025': '#8C4A1D',
-    'Feb 2025': '#951F4F',
-    'Mar 2025': '#16659C',
-    'Apr 2025': '#3BAF2B',
-    'May 2025': '#D9B03E',
+    'Jan 2025': '#0072c3',
+    'Feb 2025': '#0072c3',
+    'Mar 2025': '#0072c3',
+    'Apr 2025': '#0072c3',
+    'May 2025': '#0072c3',
+    'Jun 2025': '#0072c3'
   },
   },
+   
   legend: {
     enabled: false
   },
