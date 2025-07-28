@@ -12,11 +12,11 @@ import {
 
 import { ArrowRight } from '@carbon/icons-react';
 import { useToast } from '@/lib/hooks/useToast';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import Logo from '../Common/Logo';
 
 export default function ForgotPasswordClient() {
-  const router = useRouter();
+  // const router = useRouter();
   const [email, setEmail] = useState('');
 
   const {

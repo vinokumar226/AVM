@@ -11,8 +11,24 @@ import {
 } from '@carbon/react';
 import { DocumentPdf, Filter } from '@carbon/icons-react';
 import PaginatedTable from './PaginatedTable';
+import Image from 'next/image';
 
-// filter content into a custom component
+// Define RowData type for each row in the table
+interface RowData {
+  id: string;
+  image: React.ReactNode;
+  address: string;
+  loan: string;
+  reference: string;
+  value: string;
+  confidence: string;
+  fsd: string;
+  status: string;
+  date: string;
+  action: React.ReactNode;
+}
+
+// Filter content into a custom component
 const CustomFilterMenu = ({
   selectedStatuses,
   toggleStatusFilter,
@@ -80,10 +96,10 @@ const headers = [
   { header: 'Action', key: 'action' },
 ];
 
-const originalRows = [
+const originalRows: RowData[] = [
   {
     id: 'a',
-    image: <img src="/house.jpg" width="40" />,
+    image: <Image src="/house.jpg" alt="House" width={70} height={48} />,
     address: '838 HOUSTON RD',
     loan: '12345',
     reference: '12345',
@@ -100,7 +116,7 @@ const originalRows = [
   },
   {
     id: 'b',
-    image: <img src="/house.jpg" width="40" />,
+    image: <Image src="/house.jpg" alt="House" width={70} height={48} />,
     address: '754 GRAY FOX RUN',
     loan: '12345',
     reference: '12345',
@@ -134,12 +150,15 @@ export default function ReportsTable() {
     setSelectedStatuses([]);
   };
 
+  // Memoize filtered rows based on search text and selected statuses
   const filteredRows = useMemo(() => {
     return originalRows.filter((row) => {
-      const matchesSearch = Object.values(row).some((value: any) =>
-        typeof value === 'string' &&
-        value.toLowerCase().includes(searchText.toLowerCase())
-      );
+      const matchesSearch = Object.values(row).some((value) => {
+        if (typeof value === 'string') {
+          return value.toLowerCase().includes(searchText.toLowerCase());
+        }
+        return false;
+      });
 
       const matchesFilter =
         selectedStatuses.length === 0 || selectedStatuses.includes(row.status);
@@ -149,15 +168,15 @@ export default function ReportsTable() {
   }, [searchText, selectedStatuses]);
 
   return (
-    <div 
-        style={{
+    <div
+      style={{
         border: '1px solid #e0e0e0',
         borderRadius: '8px',
         boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
         padding: '1.5rem',
         backgroundColor: '#fff',
-        marginTop: '1rem'
-    }}
+        marginTop: '1rem',
+      }}
     >
       {/* Header */}
       <div
@@ -185,14 +204,17 @@ export default function ReportsTable() {
         <TableToolbarContent>
           <TableToolbarSearch
             value={searchText}
-            onChange={(e: any) => setSearchText(e.target.value)}
+            onChange={(event) => {
+              if (typeof event === 'string') {
+                setSearchText(event); // when cleared
+              } else {
+                setSearchText(event.target.value); // typical input
+              }
+            }}
             placeholder="Search table..."
           />
 
-          <TableToolbarMenu
-            renderIcon={Filter}
-            iconDescription="Filter status"
-          >
+          <TableToolbarMenu renderIcon={Filter} iconDescription="Filter status">
             <CustomFilterMenu
               selectedStatuses={selectedStatuses}
               toggleStatusFilter={toggleStatusFilter}

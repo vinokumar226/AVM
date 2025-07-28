@@ -1,21 +1,4 @@
-//import averageMedianPriceSqrFtBarData from './data';
-
-// const manualColors = [
-//   '#8C4A1D',
-//   '#951F4F',
-//   '#16659C',
-//   '#3BAF2B',
-//   '#D9B03E',
-//   '#6E44FF'
-// ];
-
-// 👇 Now use item.group instead of item.date
-// const colorScale = averageMedianPriceSqrFtBarData.reduce((acc, item, index) => {
-//   acc[item.group] = manualColors[index];
-//   return acc;
-// }, {} as Record<string, string>);
-
-export default {
+const averageMedianPriceOptions = {
   title: 'Average Price Per Square Feet',
   axes: {
     left: {
@@ -55,4 +38,6 @@ export default {
   },
   height: '400px'
  
-}
+};
+
+export default averageMedianPriceOptions;

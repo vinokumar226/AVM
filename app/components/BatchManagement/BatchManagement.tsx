@@ -6,8 +6,7 @@ import {
   FormItem,
   FileUploaderDropContainer,
   TextInput,
-  InlineLoading,
-  Link,
+  InlineLoading, 
   Tag,
   FileUploaderItem 
 } from '@carbon/react';

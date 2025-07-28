@@ -1,4 +1,4 @@
-export default [
+const SquareFootageData = [
   {
     group: '120-129',
     value: 0.5
@@ -27,4 +27,6 @@ export default [
     group: '180-189',
     value: 6.9
   }
-]
+];
+
+export default SquareFootageData;

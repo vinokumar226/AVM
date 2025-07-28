@@ -52,7 +52,7 @@ export default function ResetPasswordPage() {
         setError(data.message || 'Something went wrong.');
       }
     } catch (err) {
-      setError('Network error.');
+      setError('Network error.' + err  );
     }
   };
 

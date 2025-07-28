@@ -1,6 +1,6 @@
 import { ScaleTypes } from '@carbon/charts';
 
-export default {
+const historicalSalesBarData = {
   title: 'Historical Sales For ZIP (90024)',
   bar: {
     maxWidth: 22,
@@ -43,4 +43,6 @@ export default {
   accessibility: {
     svgAriaLabel: 'Bar chart of monthly historical sales'
   }
-}
+};
+
+export default historicalSalesBarData;

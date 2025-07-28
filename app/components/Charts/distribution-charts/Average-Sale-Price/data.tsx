@@ -1,4 +1,4 @@
-export default [
+const averageSalePriceData = [
   { group: "200k-249k", value: 0.5 },
   { group: "250k-299k", value: 2 },
   { group: "300k-349k", value: 3 },
@@ -12,3 +12,5 @@ export default [
   { group: "700k-749k", value: 2 },
   { group: "750k-799k", value: 0.5 },
 ];
+
+export default averageSalePriceData;

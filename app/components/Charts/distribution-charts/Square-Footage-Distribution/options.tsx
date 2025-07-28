@@ -1,9 +1,5 @@
 import { ScaleTypes } from '@carbon/charts';
 
-// const blueScale = {
-//   "170-179": "#0056CC"
-// };
-
 const allGroups = [
   "120-129", "130-139", "140-149", "150-159",
   "160-169", "180-189"
@@ -13,7 +9,7 @@ const colorScale = Object.fromEntries(
   allGroups.map(label => [label, label === "170-179" ? "#0072c3" : "#4DA5F5"])
 );
 
-export default {
+const SquareFootageOption = {
   title: 'Square Footage Distribution',
   axes: {
     left: {
@@ -39,4 +35,6 @@ export default {
   accessibility: {
     svgAriaLabel: 'Simple bar chart'
   }
-}
+};
+
+export default SquareFootageOption;

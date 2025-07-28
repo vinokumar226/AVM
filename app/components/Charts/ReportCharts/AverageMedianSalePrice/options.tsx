@@ -1,4 +1,4 @@
-export default {
+const averageMedianSalePriceBarOptions =  {
   title: 'Average Sales Price',
   axes: {
     left: {
@@ -32,4 +32,6 @@ export default {
     enabled: false
   },
   height: '400px'
-}
+};
+
+export default averageMedianSalePriceBarOptions;

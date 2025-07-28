@@ -1,27 +1,4 @@
-// export default [
-//   {
-//     group: 'Qty',
-//     value: 65000
-//   },
-//   {
-//     group: 'More',
-//     value: 29123
-//   },
-//   {
-//     group: 'Sold',
-//     value: 35213
-//   },
-//   {
-//     group: 'Restocking',
-//     value: 51213
-//   },
-//   {
-//     group: 'Misc',
-//     value: 16932
-//   }
-// ]
-
-export default [
+const SalePriceDistributionData =   [
   {
     group: '180000',
     value: 0.5
@@ -70,4 +47,6 @@ export default [
      group: '600000',
      value: 0.5
   },
-]
+];
+
+export default SalePriceDistributionData; 

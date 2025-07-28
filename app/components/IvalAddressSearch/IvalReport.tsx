@@ -5,7 +5,7 @@ import {
   Column,
   Heading,
   IconButton,
-  Tile,FlexGrid,Row,Table,TableHead,TableRow,TableHeader,TableBody,TableCell
+  Tile,FlexGrid,Row
 } from '@carbon/react';
 import {
   GeneratePdf,
@@ -29,7 +29,8 @@ import AverageMedianPriceSqrFeet from '../Charts/ReportCharts/AverageMedianPrice
 import HistoricalSales from '../Charts/ReportCharts/HistoricalSalesForNeighborhood/HistoricalSalesForNeighborhood';
 import ComparableSalesTable from '../Reports/ComparableSales';
 import TwoTablesRow from '../Reports/AssessorHistoricalTable';
-import MapSection from '../map/MapSection'
+import MapSection from '../Map/MapSection';
+import Image from 'next/image';
 // import MapContainer from '../map/MapContainer';
 
 
@@ -125,11 +126,14 @@ export default function IValReport() {
         <div className="section-heading">Property Details</div>
         <Grid fullWidth className="property-details-grid">
           <Column lg={6} md={8} sm={16} className='custom-grid'>
-            <img
-              className="property-image"
+            <Image
               src="/house.jpg"
               alt="Property"
+              width={70} 
+              height={48} 
+              className="property-image"             
             />
+           
           </Column>
           <Column lg={10} md={8} sm={16}>
             <div className="property-meta">
