@@ -29,9 +29,8 @@ import AverageMedianPriceSqrFeet from '../Charts/ReportCharts/AverageMedianPrice
 import HistoricalSales from '../Charts/ReportCharts/HistoricalSalesForNeighborhood/HistoricalSalesForNeighborhood';
 import ComparableSalesTable from '../Reports/ComparableSales';
 import TwoTablesRow from '../Reports/AssessorHistoricalTable';
-import MapSection from '../Map/MapSection';
+import MapSection from '../map/MapSection';
 import Image from 'next/image';
-// import MapContainer from '../map/MapContainer';
 
 
 export default function IValReport() {
