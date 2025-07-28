@@ -46,7 +46,7 @@ const ComparableSalesTable = () => {
   const hasData = rows.length > 0;
 
 return (
-<div className="dashboard-table-container">
+<div>
     {hasData ? (
   <Table aria-label="sample table">
   <TableHead>
@@ -97,12 +97,12 @@ return (
   </TableHead>
   <TableBody>
     <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
+       <TableCell>
+              <img src="/ian-macdonald--dcznEJPmsk-unsplash 1.png" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              838 HOUSTON RD, 90024
+            </TableCell>
       <TableCell>
         98%
       </TableCell>
@@ -142,11 +142,319 @@ return (
     </TableRow>
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
+              <img src="/i-do-nothing-but-love-mDdXR_tTq3U-unsplash 1.png" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              754 GRAY FOX RUN, 90024
+            </TableCell>
+      <TableCell>
+        95%
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+       N/A
       </TableCell>
+      <TableCell>
+        2002
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Sold
+      </TableCell>
+    </TableRow>
+    <TableRow>
+     <TableCell>
+             <img src="/dillon-kydd-3Ignkeds3w8-unsplash 1.png" alt="House" width={50} />
+           </TableCell>
+           <TableCell>
+             755 SOMERSET DR, 90024
+           </TableCell>
+      <TableCell>
+        93%
+      </TableCell>
+      <TableCell>
+       0.50
+      </TableCell>
+      <TableCell>
+        1980
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Sold
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+              <img src="/property1.jpg" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              610 GALBRO CIR, 90024
+            </TableCell>
+      <TableCell>
+        93%
+      </TableCell>
+      <TableCell>
+       0.38
+      </TableCell>
+      <TableCell>
+        1999
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+              <img src="/property2.jpg" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              755 SOMERSET DR, 90024
+            </TableCell>
+      <TableCell>
+        95%
+      </TableCell>
+      <TableCell>
+       0.63
+      </TableCell>
+      <TableCell>
+        2000
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Sold
+      </TableCell>
+    </TableRow>
+    <TableRow>
+     <TableCell>
+             <img src="/property3.jpg" alt="House" width={50} />
+           </TableCell>
+           <TableCell>
+             754 GRAY FOX RUN, 90024
+           </TableCell>
+      <TableCell>
+        97%
+      </TableCell>
+      <TableCell>
+       N/A
+      </TableCell>
+      <TableCell>
+        2005
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
+      </TableCell>
+    </TableRow>
+    <TableRow>
+       <TableCell>
+              <img src="/property4.jpg" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              755 SOMERSET DR, 90024
+            </TableCell>
+      <TableCell>
+        96%
+      </TableCell>
+      <TableCell>
+      0.56
+      </TableCell>
+      <TableCell>
+        2012
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Active
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+              <img src="/property5.jpg" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              754 GRAY FOX RUN, 90024
+            </TableCell>
+      <TableCell>
+        98%
+      </TableCell>
+      <TableCell>
+       N/A
+      </TableCell>
+      <TableCell>
+        2002
+      </TableCell>
+      <TableCell>
+        4/2.1
+      </TableCell>
+      <TableCell>
+        2,138
+      </TableCell>
+      <TableCell>
+        29,185
+      </TableCell>
+      <TableCell>
+        Colonial
+      </TableCell>
+      <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+       <TableCell>
+        $254,000
+      </TableCell>
+      <TableCell>
+        01/10/2019
+      </TableCell>
+      <TableCell>
+       Sold
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+              <img src="/property6.jpg" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              755 SOMERSET DR, 90024
+            </TableCell>
       <TableCell>
         98%
       </TableCell>
@@ -186,319 +494,11 @@ return (
     </TableRow>
     <TableRow>
       <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
-      <TableCell>
-        98%
-      </TableCell>
-      <TableCell>
-       N/A
-      </TableCell>
-      <TableCell>
-        2002
-      </TableCell>
-      <TableCell>
-        4/2.1
-      </TableCell>
-      <TableCell>
-        2,138
-      </TableCell>
-      <TableCell>
-        29,185
-      </TableCell>
-      <TableCell>
-        Colonial
-      </TableCell>
-      <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-       <TableCell>
-        $254,000
-      </TableCell>
-      <TableCell>
-        01/10/2019
-      </TableCell>
-      <TableCell>
-       Active
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell>
-        <img src="/house.jpg" alt="House" width={50} />
-      </TableCell>
-      <TableCell>
-        838 HOUSTON RD
-      </TableCell>
+              <img src="/property7.jpg" alt="House" width={50} />
+            </TableCell>
+            <TableCell>
+              838 HOUSTON RD10, 90024
+            </TableCell>
       <TableCell>
         98%
       </TableCell>

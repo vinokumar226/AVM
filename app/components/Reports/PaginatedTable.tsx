@@ -24,7 +24,7 @@ interface PaginatedTableProps {
 export default function PaginatedTable({
   headers,
   rows,
-  pageSizes = [5, 10, 20],
+  pageSizes = [10, 20],
   //size = 'sm'
 }: PaginatedTableProps) {
   const [currentPage, setCurrentPage] = useState(1);
