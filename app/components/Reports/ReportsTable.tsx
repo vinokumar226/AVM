@@ -245,7 +245,12 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/property2.jpg" alt="House" width={50} />
+        <Image
+          src="/property2.jpg"
+          alt="House"
+          width={50}
+          height={48}              
+        /> 
       </TableCell>
       <TableCell>
         755 SOMERSET DR, 90024
@@ -278,7 +283,12 @@ return (
 
     <TableRow>
       <TableCell>
-        <img src="/property3.jpg" alt="House" width={50} />
+        <Image
+          src="/property3.jpg"
+          alt="House"
+          width={50}
+          height={48}              
+        /> 
       </TableCell>
       <TableCell>
         754 GRAY FOX RUN, 90024

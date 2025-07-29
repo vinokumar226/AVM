@@ -3,10 +3,8 @@ import TileComponent from "./TileComponent";
 import {
   Home,
   UserProfileAlt,
-  RulerAlt,
   Crop,
   Calendar,
-  BuildingInsights_1
 } from "@carbon/icons-react";
 
 const tileData = [

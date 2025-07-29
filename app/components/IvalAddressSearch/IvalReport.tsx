@@ -3,7 +3,6 @@ import React from 'react';
 import { ReactNode } from "react";
 
 import {
-  Grid,
   Column,
   Heading,
   IconButton,
@@ -29,15 +28,9 @@ import AverageMedianSalePrice from '../Charts/ReportCharts/AverageMedianSalePric
 import AverageMedianPriceSqrFeet from '../Charts/ReportCharts/AverageMedianPriceSqrFeet/AverageMedianPriceSqrFeet';
 import HistoricalSales from '../Charts/ReportCharts/HistoricalSalesForNeighborhood/HistoricalSalesForNeighborhood';
 import ComparableSalesTable from '../Reports/ComparableSales';
-<<<<<<< HEAD
-import TwoTablesRow from '../Reports/AssessorHistoricalTable';
-import MapSection from '../map/MapSection';
-import Image from 'next/image';
-=======
 import AssessorHistoricalTable from '../Reports/AssessorHistoricalTable';
-import MapSection from '../map/MapSection'
-import TileGrid from './TileGrid';
->>>>>>> report-pdf-generation
+import MapSection from '../Map/MapSection';
+import Image from 'next/image';
 
 interface TileComponentProps {
   icon: ReactNode;
@@ -150,37 +143,18 @@ export default function IValReport() {
 
       {/* Property Details */}
         <div className="section-heading">Property Details</div>
-<<<<<<< HEAD
-        <Grid fullWidth className="property-details-grid">
-          <Column lg={6} md={8} sm={16} className='custom-grid'>
-            <Image
-              src="/house.jpg"
-              alt="Property"
-              width={70} 
-              height={48} 
-              className="property-image"             
-            />
-           
-          </Column>
-          <Column lg={10} md={8} sm={16}>
-            <div className="property-meta">
-              <p><span>Address:</span> <strong>1245 Elmwood Ave</strong></p>
-              <p><span>City/State:</span> <strong>Los Angeles, CA</strong></p>
-              <p><span>ZIP Code:</span> <strong>90024</strong></p>
-              <p><span>Neighborhood:</span> <strong>Westwood Village</strong></p>
-            </div>
-=======
             <FlexGrid fullWidth className="property-details-grid custom-grid">
               <div className="property-content-row">
                 {/* Left Image */}
                 <div className="property-image-column">
-                  <img
-                    className="property-image"
+                  <Image
                     src="/house.jpg"
                     alt="Property"
+                    width={70} 
+                    height={48} 
+                    className="property-image"             
                   />
                 </div>
->>>>>>> report-pdf-generation
 
                 {/* Right Tile Section */}
                 <div className="property-details-column">

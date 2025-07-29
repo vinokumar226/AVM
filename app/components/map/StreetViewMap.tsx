@@ -20,7 +20,7 @@ const StreetViewMap = () => {
     map.setZoom(15);
     map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
 
-    const { AdvancedMarkerElement } = google.maps.marker;
+    //const { AdvancedMarkerElement } = google.maps.marker;
 
     //pin image URL
     // const img = document.createElement("img");

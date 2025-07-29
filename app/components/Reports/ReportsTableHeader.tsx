@@ -133,7 +133,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'c',
-    image: <img src="/property3.jpg" width="40" />,
+    image: <Image src="/property3.jpg" alt="House" width={70} height={48} />,
     address: '755 SOMERSET DR, 90024',
     loan: '125334',
     reference: '12534',
@@ -150,7 +150,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'd',
-    image: <img src="/property4.jpg" width="40" />,
+    image: <Image src="/property4.jpg" alt="House" width={70} height={48} />,
     address: '610 GALBRO CIR, 90024',
     loan: '145423',
     reference: '14523',
@@ -167,7 +167,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'e',
-    image: <img src="/property5.jpg" width="40" />,
+    image: <Image src="/property5.jpg" alt="House" width={70} height={48} />,
     address: ' 755 SOMERSET DR, 90024',
     loan: '345512',
     reference: '34512',
@@ -184,7 +184,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'f',
-    image: <img src="/property6.jpg" width="40" />,
+    image: <Image src="/property6.jpg" alt="House" width={70} height={48} />,
     address: '754 GRAY FOX RUN, 90024',
     loan: '156234',
     reference: '15234',
@@ -201,7 +201,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'g',
-    image: <img src="/property7.jpg" width="40" />,
+    image: <Image src="/property7.jpg" alt="House" width={70} height={48} />,
     address: '755 SOMERSET DR, 90024',
     loan: '457123',
     reference: '45123',
@@ -218,7 +218,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'h',
-    image: <img src="/house.jpg" width="40" />,
+    image: <Image src="/house.jpg" alt="House" width={70} height={48} />,
     address: '754 GRAY FOX RUN, 90024',
     loan: '124583',
     reference: '12453',
@@ -235,7 +235,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'i',
-    image: <img src="/house.jpg" width="40" />,
+    image: <Image src="/house.jpg" alt="House" width={70} height={48} />,
     address: '755 SOMERSET DR, 90024',
     loan: '124593',
     reference: '12453',
@@ -252,7 +252,7 @@ const originalRows: RowData[] = [
   },
   {
     id: 'j',
-    image: <img src="/house.jpg" width="40" />,
+    image:  <Image src="/house.jpg" alt="House" width={70} height={48} />,
     address: '838 HOUSTON RD10, 90024',
     loan: '145237',
     reference: '14235',
