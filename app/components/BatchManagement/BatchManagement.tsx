@@ -29,7 +29,7 @@ const rows = [
     id: '1',
     batch: 'AVM-Batch-001',
     uploader: 'John Smith',
-    date: '06/09/2025',
+    date: '06/07/2025',
     time: '24 Hours',
     status: <Tag type="red">Processing</Tag>,
     actions: (
@@ -42,7 +42,7 @@ const rows = [
     id: '2',
     batch: 'AVM-Batch-002',
     uploader: 'Maya Lee',
-    date: '06/09/2025',
+    date: '07/07/2025',
     time: '48 Hours',
     status: <Tag type="green">Completed</Tag>,
     actions: (
@@ -55,8 +55,8 @@ const rows = [
     id: '3',
     batch: 'AVM-Batch-003',
     uploader: 'George William',
-    date: '06/09/2025',
-    time: '48 Hours',
+    date: '08/07/2025',
+    time: '24 Hours',
     status: <Tag type="green">Completed</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
@@ -68,7 +68,7 @@ const rows = [
     id: '4',
     batch: 'AVM-Batch-004',
     uploader: 'John David',
-    date: '06/09/2025',
+    date: '06/07/2025',
     time: '48 Hours',
     status: <Tag type="green">Completed</Tag>,
     actions: (
@@ -82,7 +82,7 @@ const rows = [
     batch: 'AVM-Batch-005',
     uploader: 'Maya Lee',
     date: '06/09/2025',
-    time: '48 Hours',
+    time: '24 Hours',
     status: <Tag type="green">Completed</Tag>,
     actions: (
       <Button kind="ghost" size="sm" iconDescription="Download">
@@ -100,7 +100,7 @@ export default function BatchManagement() {
   const handleUpload = () => {
     if (!fileNames) return;
     setIsProcessing(true);
-    setTimeout(() => setIsProcessing(false), 3000);
+    //setTimeout(() => setIsProcessing(false), 3000);
   };
 
   return (

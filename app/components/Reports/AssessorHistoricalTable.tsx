@@ -14,17 +14,20 @@ import {
 } from '@carbon/react';
 
 const assessorData = [
-  { label: 'Assessed Value:', value: '$485,000' },
-  { label: 'Assessed Year:', value: '2024' },
-  { label: 'Parcel/APN:', value: '123-456-789' },
-  { label: 'Census Tract:', value: '06075060100' },
+  { label: 'Assessed Value:', value: 'Sold' },
+  { label: 'Assessed Year:', value: 'Foreclosure' },
+  { label: 'Parcel/APN:', value: 'Short Sale' },
+  { label: 'Census Tract:', value: 'Listed' },
   {
     label: 'Brief Legal Description:',
-    value: 'Lot 12, Block 3, Sunnyvale Heights Subdivision',
+    value: 'Sold',
   },
-  { label: 'Owner of Record:', value: 'John Doe' },
-  { label: 'Last Sale:', value: '$470,000 on 05/10/2022' },
-  { label: 'Last Refi:', value: '$400,000 on 01/15/2024' },
+  { label: 'Owner of Record:', value: 'REO' },
+  { label: 'Last Sale:', value: 'Sold' },
+  { label: 'Last Refi:', value: 'Sold' },
+  { label: 'Original loan amount:', value: '$325,000' },
+  { label: 'Lender Name:', value: 'First National Mortgage Inc' },
+  { label: 'Total Repayment:', value: '$487,500' },
 ];
 
 const historicalHeaders = [
@@ -35,8 +38,8 @@ const historicalHeaders = [
 
 const historicalRows = [
   { id: '1', date: '05/10/2022', price: '$485,000', type: 'Sold' },
-  { id: '2', date: '08/30/2021', price: '$550,000', type: 'Sold' },
-  { id: '3', date: '07/28/2020', price: '$610,000', type: 'Sold' },
+  { id: '2', date: '08/30/2021', price: '$550,000', type: 'Foreclosure' },
+  { id: '3', date: '07/28/2020', price: '$610,000', type: 'Short Sale' },
   { id: '4', date: '06/19/2019', price: '$875,000', type: 'Listed' },
   { id: '5', date: '10/08/2018', price: '$850,000', type: 'Sold' },
   { id: '6', date: '09/13/2028', price: '$980,000', type: 'Listed' },
@@ -44,14 +47,14 @@ const historicalRows = [
   { id: '8', date: '12/20/2016', price: '$990,000', type: 'Sold' },
   { id: '9', date: '12/27/2015', price: '$1,090,000', type: 'Sold' },
   { id: '10', date: '01/20/2017', price: '$1,200,000', type: 'Sold' },
+  { id: '11', date: '01/20/2017', price: '$1,400,000', type: 'Foreclosure' },
 ];
 
-const DualTableLayout = () => {
+const AssessorHistoricalTable = () => {
   return (
     <FlexGrid fullWidth className='custom-grid'>
       <Row>
-        <Column lg={8} md={4} sm={4}>
-          {/* <TableContainer title="Assessor/Public Record"> */}
+        <Column lg={8} md={4} sm={4} className='nopadding-left'>
           <div className="section-heading">Assessor/Public Record</div>
             <Table>
               <TableHead>
@@ -69,11 +72,9 @@ const DualTableLayout = () => {
                 ))}
               </TableBody>
             </Table>
-          {/* </TableContainer> */}
         </Column>
 
-        <Column lg={8} md={4} sm={4}>
-          {/* <TableContainer title="Historical Information"> */}
+        <Column lg={8} md={4} sm={4} className='nopadding-right'>
           <div className="section-heading">Historical Information</div>
             <Table>
               <TableHead>
@@ -93,11 +94,10 @@ const DualTableLayout = () => {
                 ))}
               </TableBody>
             </Table>
-          {/* </TableContainer> */}
         </Column>
       </Row>
     </FlexGrid>
   );
 };
 
-export default DualTableLayout;
+export default AssessorHistoricalTable;

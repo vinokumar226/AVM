@@ -8,7 +8,7 @@ import StreetViewMap from './StreetViewMap';
 
 const MapContainer: React.FC = () => {
   return (
-    <FlexGrid fullWidth className="map-section">
+    <FlexGrid fullWidth className="map-section custom-grid">
       <Row className="map-row">
         <Column lg={16}>
           <RoadMapView />

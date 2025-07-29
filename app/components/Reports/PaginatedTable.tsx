@@ -21,7 +21,7 @@ interface PaginatedTableProps<T> {
 export default function PaginatedTable<T extends { id: string }>({
   headers,
   rows,
-  pageSizes = [5, 10, 20]
+  pageSizes = [10, 20]
 }: PaginatedTableProps<T>) {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(pageSizes[0]);

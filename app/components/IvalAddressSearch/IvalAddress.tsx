@@ -9,7 +9,8 @@ import {
   Button,
   Theme,
   Form,
-  FormGroup
+  FormGroup,
+  Tooltip
 } from "@carbon/react";
 import { Help } from '@carbon/icons-react';
 import IValReport from './IvalReport';
@@ -24,6 +25,8 @@ const AddressSearchForm = () => {
     loan: "",
     reference: "",
   });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -43,20 +46,23 @@ const AddressSearchForm = () => {
       loan: "",
       reference: "",
     });
+    setIsSubmitted(false);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
     // Submit logic here (e.g., API call)
+    setIsSubmitted(true);
   };
+
+  const isSubmitDisabled = formData.address.trim() === "";
 
   return (
     <Theme theme="white">
       <div className="ivalavm-form-container">
         <Form className="form-legend" onSubmit={handleSubmit}>
           <FormGroup legendText="i-Val® AVM" legendId="avm-legend" className="custom-legend">
-            <div className="help-icon"><Help size="24"/> </div>
+            <div className="help-icon"><Tooltip label="Help" align="left"><Help size="24"/></Tooltip> </div>
           <FlexGrid fullWidth className="custom-grid">
             <Row className="form-row">
               <Column lg={8} md={8} sm={16}>
@@ -137,7 +143,7 @@ const AddressSearchForm = () => {
             >
               Reset
             </Button>
-            <Button kind="primary" size="md" type="submit" className="btn-submit">
+            <Button kind="primary" size="md" type="submit" className="btn-submit" disabled={isSubmitDisabled}>
               Submit
             </Button>
           </div>
@@ -145,9 +151,11 @@ const AddressSearchForm = () => {
         </Form>
       </div>
 
-      <div>
-        <IValReport />
-      </div>
+      {isSubmitted && (
+        <div>
+          <IValReport />
+        </div>
+      )}
     </Theme>
   );
 };

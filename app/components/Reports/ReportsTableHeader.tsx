@@ -99,8 +99,8 @@ const headers = [
 const originalRows: RowData[] = [
   {
     id: 'a',
-    image: <Image src="/house.jpg" alt="House" width={70} height={48} />,
-    address: '838 HOUSTON RD',
+    image: <Image src="/property1.jpg" alt="House" width={70} height={48} />,
+    address: '838 HOUSTON RD, 90024',
     loan: '12345',
     reference: '12345',
     value: '$345,000',
@@ -116,10 +116,10 @@ const originalRows: RowData[] = [
   },
   {
     id: 'b',
-    image: <Image src="/house.jpg" alt="House" width={70} height={48} />,
-    address: '754 GRAY FOX RUN',
-    loan: '12345',
-    reference: '12345',
+    image: <Image src="/property2.jpg" alt="House" width={70} height={48} />,
+    address: '754 GRAY FOX RUN, 90024',
+    loan: '145232',
+    reference: '14523',
     value: '$278,500',
     confidence: '88',
     fsd: '89%',
@@ -131,6 +131,142 @@ const originalRows: RowData[] = [
       </Link>
     ),
   },
+  {
+    id: 'c',
+    image: <img src="/property3.jpg" width="40" />,
+    address: '755 SOMERSET DR, 90024',
+    loan: '125334',
+    reference: '12534',
+    value: '$412,000',
+    confidence: '95',
+    fsd: '98%',
+    status: 'Active',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'd',
+    image: <img src="/property4.jpg" width="40" />,
+    address: '610 GALBRO CIR, 90024',
+    loan: '145423',
+    reference: '14523',
+    value: '$189,000',
+    confidence: '75',
+    fsd: '72%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'e',
+    image: <img src="/property5.jpg" width="40" />,
+    address: ' 755 SOMERSET DR, 90024',
+    loan: '345512',
+    reference: '34512',
+    value: '$385,000',
+    confidence: '91',
+    fsd: '93%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'f',
+    image: <img src="/property6.jpg" width="40" />,
+    address: '754 GRAY FOX RUN, 90024',
+    loan: '156234',
+    reference: '15234',
+    value: '$222,000',
+    confidence: '82',
+    fsd: '85%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'g',
+    image: <img src="/property7.jpg" width="40" />,
+    address: '755 SOMERSET DR, 90024',
+    loan: '457123',
+    reference: '45123',
+    value: '$385,000',
+    confidence: '91',
+    fsd: '93%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'h',
+    image: <img src="/house.jpg" width="40" />,
+    address: '754 GRAY FOX RUN, 90024',
+    loan: '124583',
+    reference: '12453',
+    value: '$222,000',
+    confidence: '82',
+    fsd: '85%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'i',
+    image: <img src="/house.jpg" width="40" />,
+    address: '755 SOMERSET DR, 90024',
+    loan: '124593',
+    reference: '12453',
+    value: '$412,000',
+    confidence: '95',
+    fsd: '98%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  },
+  {
+    id: 'j',
+    image: <img src="/house.jpg" width="40" />,
+    address: '838 HOUSTON RD10, 90024',
+    loan: '145237',
+    reference: '14235',
+    value: '$278,500',
+    confidence: '88',
+    fsd: '89%',
+    status: 'Sold',
+    date: 'May 18, 2025',
+    action: (
+      <Link href="#">
+        <DocumentPdf />
+      </Link>
+    ),
+  }
   // Add more rows as needed
 ];
 

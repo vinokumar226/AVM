@@ -45,19 +45,20 @@ const subjectPolygon = getRotatedRectangle(center, 20, 15, 40);
 const SatelliteMapView = () => {
   const onLoad = useCallback((map: google.maps.Map) => {
     map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
-    const { AdvancedMarkerElement } = google.maps.marker;
+    map.panTo(center);  // inside onLoad()
+    // const { AdvancedMarkerElement } = google.maps.marker;
 
-    new AdvancedMarkerElement({
-      map,
-      position: center,
-      title: "Subject Property",
-      content: createLabeledPin("S", "red"),
-    });
+    // new AdvancedMarkerElement({
+    //   map,
+    //   position: center,
+    //   title: "Subject Property",
+    //   //content: createLabeledPin("S", "red"),
+    // });
   }, []);
 
   return (
     <GoogleMap
-      mapContainerStyle={{ width: "100%", height: "400px" }}
+      mapContainerStyle={{ width: "100%", height: "364px" }}
       center={center}
       zoom={20}
       mapTypeId="satellite"
@@ -65,8 +66,9 @@ const SatelliteMapView = () => {
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: false,
-        disableDefaultUI: false,
+        disableDefaultUI: true,
         mapId: "d6bb96ee61a1b1a42ef563be", // Keep your existing mapId
+        gestureHandling: "none"
       }}
       onLoad={onLoad}
     >
@@ -75,7 +77,7 @@ const SatelliteMapView = () => {
         options={{
           strokeColor: "#FFD700",
           strokeOpacity: 1.0,
-          strokeWeight: 2,
+          strokeWeight: 5,
           fillOpacity: 0,
         }}
       />
@@ -83,21 +85,21 @@ const SatelliteMapView = () => {
   );
 };
 
-function createLabeledPin(label: string, color: string) {
-  const pin = document.createElement("div");
-  pin.style.width = "24px";
-  pin.style.height = "24px";
-  pin.style.borderRadius = "50%";
-  pin.style.background = color;
-  pin.style.color = "white";
-  pin.style.display = "flex";
-  pin.style.alignItems = "center";
-  pin.style.justifyContent = "center";
-  pin.style.fontSize = "14px";
-  pin.style.fontWeight = "bold";
-  pin.style.boxShadow = "0 0 4px rgba(0,0,0,0.6)";
-  pin.innerText = label;
-  return pin;
-}
+// function createLabeledPin(label: string, color: string) {
+//   const pin = document.createElement("div");
+//   pin.style.width = "24px";
+//   pin.style.height = "24px";
+//   pin.style.borderRadius = "50%";
+//   pin.style.background = color;
+//   pin.style.color = "white";
+//   pin.style.display = "flex";
+//   pin.style.alignItems = "center";
+//   pin.style.justifyContent = "center";
+//   pin.style.fontSize = "14px";
+//   pin.style.fontWeight = "bold";
+//   pin.style.boxShadow = "0 0 4px rgba(0,0,0,0.6)";
+//   pin.innerText = label;
+//   return pin;
+// }
 
 export default SatelliteMapView;

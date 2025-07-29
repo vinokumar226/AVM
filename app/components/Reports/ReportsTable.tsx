@@ -70,7 +70,16 @@ return (
       <TableHeader>
         Reference#
       </TableHeader>
+       <TableHeader>
+        Estimated Value
+      </TableHeader>
+       <TableHeader>
+        Confidence Score
+      </TableHeader>
       <TableHeader>
+        FSD
+      </TableHeader>
+       <TableHeader>
         Status
       </TableHeader>
        <TableHeader>
@@ -85,20 +94,28 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/ian-macdonald--dcznEJPmsk-unsplash 1.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}          
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        838 HOUSTON RD, 90024
+      </TableCell>
+      <TableCell>
+        123451
       </TableCell>
       <TableCell>
         12345
       </TableCell>
       <TableCell>
-        12345
+        $345,000
+      </TableCell>
+      <TableCell>
+        92
+      </TableCell>
+      <TableCell>
+        97%
       </TableCell>
       <TableCell>
         Active
@@ -114,20 +131,28 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/i-do-nothing-but-love-mDdXR_tTq3U-unsplash 1.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}            
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        754 GRAY FOX RUN, 90024
       </TableCell>
       <TableCell>
-        12345
+        145232
       </TableCell>
       <TableCell>
-        12345
+        14523
+      </TableCell>
+      <TableCell>
+        $278,500
+      </TableCell>
+      <TableCell>
+        88
+      </TableCell>
+      <TableCell>
+        89%
       </TableCell>
       <TableCell>
         Active
@@ -143,20 +168,28 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/dillon-kydd-3Ignkeds3w8-unsplash 1.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}              
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        755 SOMERSET DR, 90024
       </TableCell>
       <TableCell>
-        12345
+        125334
       </TableCell>
       <TableCell>
-        12345
+        12534
+      </TableCell>
+      <TableCell>
+        $412,000
+      </TableCell>
+      <TableCell>
+        95
+      </TableCell>
+      <TableCell>
+        98%
       </TableCell>
       <TableCell>
         Active
@@ -172,20 +205,94 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/property1.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}              
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        610 GALBRO CIR, 90024
       </TableCell>
       <TableCell>
-        12345
+        145423
       </TableCell>
       <TableCell>
-        12345
+        14523
+      </TableCell>
+      <TableCell>
+        $189,000
+      </TableCell>
+      <TableCell>
+        75
+      </TableCell>
+      <TableCell>
+        72%
+      </TableCell>
+      <TableCell>
+        Sold
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/property2.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        755 SOMERSET DR, 90024
+      </TableCell>
+      <TableCell>
+        345512
+      </TableCell>
+      <TableCell>
+        34512
+      </TableCell>
+      <TableCell>
+        $385,000
+      </TableCell>
+      <TableCell>
+        91
+      </TableCell>
+      <TableCell>
+        93%
+      </TableCell>
+      <TableCell>
+        Sold
+      </TableCell>
+      <TableCell>
+        May 27, 2025
+      </TableCell>
+      <TableCell>
+        <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>
+      </TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>
+        <img src="/property3.jpg" alt="House" width={50} />
+      </TableCell>
+      <TableCell>
+        754 GRAY FOX RUN, 90024
+      </TableCell>
+      <TableCell>
+        156234
+      </TableCell>
+      <TableCell>
+        15234
+      </TableCell>
+      <TableCell>
+        $385,000
+      </TableCell>
+      <TableCell>
+        91
+      </TableCell>
+      <TableCell>
+        93%
       </TableCell>
       <TableCell>
         Active
@@ -201,20 +308,28 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/property4.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}         
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        755 SOMERSET DR, 90024
       </TableCell>
       <TableCell>
-        12345
+        457123
       </TableCell>
       <TableCell>
-        12345
+        45123
+      </TableCell>
+       <TableCell>
+        $385,000
+      </TableCell>
+      <TableCell>
+        91
+      </TableCell>
+      <TableCell>
+        93%
       </TableCell>
       <TableCell>
         Active
@@ -230,20 +345,28 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/property5.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}             
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        754 GRAY FOX RUN, 90024
       </TableCell>
       <TableCell>
-        12345
+        124583
       </TableCell>
       <TableCell>
-        12345
+        12453
+      </TableCell>
+       <TableCell>
+        $222,000
+      </TableCell>
+      <TableCell>
+        82
+      </TableCell>
+      <TableCell>
+        85%
       </TableCell>
       <TableCell>
         Active
@@ -259,23 +382,31 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/property6.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}            
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        755 SOMERSET DR, 90024
       </TableCell>
       <TableCell>
-        12345
+        124593
       </TableCell>
       <TableCell>
-        12345
+        12453
+      </TableCell>
+       <TableCell>
+        $385,000
       </TableCell>
       <TableCell>
-        Active
+        91
+      </TableCell>
+      <TableCell>
+        93%
+      </TableCell>
+      <TableCell>
+        Sold
       </TableCell>
       <TableCell>
         May 27, 2025
@@ -288,26 +419,28 @@ return (
     <TableRow>
       <TableCell>
         <Image
-          src="/house.jpg"
+          src="/property7.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={50}             
         /> 
       </TableCell>
       <TableCell>
-        838 HOUSTON RD
+        838 HOUSTON RD10, 90024
       </TableCell>
       <TableCell>
-        12345
+        145237
       </TableCell>
       <TableCell>
-        12345
+        14235
+      </TableCell>
+       <TableCell>
+        $222,000
       </TableCell>
       <TableCell>
-        Active
+        82
       </TableCell>
       <TableCell>
-        May 27, 2025
+        85%
       </TableCell>
       <TableCell>
         <Link href="/path/to/document.pdf"><DocumentPdf size={20} /></Link>

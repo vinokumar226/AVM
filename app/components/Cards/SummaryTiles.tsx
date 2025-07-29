@@ -45,22 +45,26 @@ const SummaryCards = () => {
         <Tile className="summary-tile">
           <div className="tile-icon notebook"><Notebook size={20} /></div>
           <div className="tile-label">MLS</div>
+          <div className="tile-value-blocks">
           <div className="value-column">
             {/* <div className='prop-values'> */}
               <div style={{ textAlign:'center' }} className="tile-value">120.5 M</div>
               <div style={{ textAlign:'center' }} className="tile-subtext">Properties</div>
             {/* </div> */}
           </div>
+          </div>
         </Tile>
 
         <Tile className="summary-tile">
           <div className="tile-icon home"><Certificate size={20} /></div>
           <div className="tile-label">Public Records</div>
+          <div className="tile-value-blocks">
           <div className="value-column">
             <div className='prop-values'>
-              <div style={{ textAlign:'center' }} className="tile-value">120.5 M</div>
+              <div style={{ textAlign:'center' }} className="tile-value">160.3 M</div>
               <div style={{ textAlign:'center' }} className="tile-subtext">Properties</div>
             </div>
+          </div>
           </div>
         </Tile>
       </Column>
