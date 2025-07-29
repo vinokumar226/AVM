@@ -96,7 +96,8 @@ return (
         <Image
           src="/ian-macdonald--dcznEJPmsk-unsplash 1.jpg"
           alt="House"
-          width={50}          
+          width={50}
+          height={48}        
         /> 
       </TableCell>
       <TableCell>
@@ -133,7 +134,8 @@ return (
         <Image
           src="/i-do-nothing-but-love-mDdXR_tTq3U-unsplash 1.jpg"
           alt="House"
-          width={50}            
+          width={50}
+          height={48}           
         /> 
       </TableCell>
       <TableCell>
@@ -170,7 +172,8 @@ return (
         <Image
           src="/dillon-kydd-3Ignkeds3w8-unsplash 1.jpg"
           alt="House"
-          width={50}              
+          width={50}
+          height={48}              
         /> 
       </TableCell>
       <TableCell>
@@ -207,7 +210,8 @@ return (
         <Image
           src="/property1.jpg"
           alt="House"
-          width={50}              
+          width={50}
+          height={48}             
         /> 
       </TableCell>
       <TableCell>
@@ -310,7 +314,8 @@ return (
         <Image
           src="/property4.jpg"
           alt="House"
-          width={50}         
+          width={50}
+          height={48}     
         /> 
       </TableCell>
       <TableCell>
@@ -347,7 +352,8 @@ return (
         <Image
           src="/property5.jpg"
           alt="House"
-          width={50}             
+          width={50}
+          height={48}         
         /> 
       </TableCell>
       <TableCell>
@@ -384,7 +390,8 @@ return (
         <Image
           src="/property6.jpg"
           alt="House"
-          width={50}            
+          width={50}
+          height={48}       
         /> 
       </TableCell>
       <TableCell>
@@ -421,7 +428,8 @@ return (
         <Image
           src="/property7.jpg"
           alt="House"
-          width={50}             
+          width={50}
+          height={48}           
         /> 
       </TableCell>
       <TableCell>
@@ -452,8 +460,8 @@ return (
         <Image
           src="/house.jpg"
           alt="House"
-          width={70} 
-          height={48}              
+          width={70}
+          height={48}            
         /> 
       </TableCell>
       <TableCell>
@@ -481,8 +489,8 @@ return (
         <Image
           src="/house.jpg"
           alt="House"
-          width={70} 
-          height={48}             
+          width={70}
+          height={48}
         /> 
       </TableCell>
       <TableCell>
